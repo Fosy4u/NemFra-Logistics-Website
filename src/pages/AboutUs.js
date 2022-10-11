@@ -11,8 +11,6 @@ import Csr from "components/csr/TwoColumnForCSR.js";
 import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg";
 import { ReactComponent as Heart } from "feather-icons/dist/icons/heart.svg";
 
-import NavBar from "../components/hero/NavBar";
-import AboutIntro from "components/hero/AboutIntro";
 import Truck2 from "../images/Truck-1-on-white-background.png";
 import Origin from "components/hero/Origin";
 import Footer from "components/footers/Footer";
@@ -20,7 +18,7 @@ import ImageBackground from "components/hero/ImageBackground";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 const HighlightedText = tw.span`text-primary-500`;
-const StyledDiv = tw.div` p-8`;
+
 export default () => {
   const [showWhite, setShowWhite] = useState(false);
   const [show, setShow] = useState(false);
