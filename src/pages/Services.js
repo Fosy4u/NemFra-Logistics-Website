@@ -82,7 +82,7 @@ const Services = () => {
         <ArrowUp />
       </button>
       <a
-        href="https://wa.me/447466874452"
+        href="https://wa.me/2347061146501"
         class="whatsapp_float bounceIn"
         target="_blank"
         rel="noopener noreferrer"
