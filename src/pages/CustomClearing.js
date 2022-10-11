@@ -23,9 +23,8 @@ const cards = [
     imageSrc: Truck2,
     company: "Road Transportation.",
     type: "Ad Campaign",
-    title: "Personalized Ad Campaign using Google AdWords",
-    durationText: "90 Days Campaign",
-    locationText: "New York",
+    title: "Get your goods moved to anywhere in Nigeria",
+  
     serviceLink: "/services/roadtransport",
   },
   {
@@ -33,8 +32,7 @@ const cards = [
     company: "Truck Sales.",
 
     title: "Shop directly from European Market",
-    durationText: "90 Days Campaign",
-    locationText: "New York",
+ 
     serviceLink: "/services/trucksales",
   },
 ];

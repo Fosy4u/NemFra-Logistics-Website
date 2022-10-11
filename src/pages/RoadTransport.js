@@ -31,8 +31,7 @@ const cards = [
     company: "Truck Sales.",
 
     title: "Shop directly from European Market",
-    durationText: "90 Days Campaign",
-    locationText: "New York",
+
     serviceLink: "/services/trucksales",
   },
   {
