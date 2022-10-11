@@ -53,7 +53,7 @@ export default () => {
         //   backgroundSize: "cover",
         // }}
         style={{
-          background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ), url(${"/NemfraTruck-resized.jpg"})   no-repeat  fixed `,
+          background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ), url(${"/NemfraTruck-resized.jpg"})   no-repeat  fixed center center `,
           backgroundSize: "cover",
           height: "100vh",
         }}
