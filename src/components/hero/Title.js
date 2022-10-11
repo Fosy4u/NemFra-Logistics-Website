@@ -7,9 +7,9 @@ import { css } from "styled-components/macro";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 
 import Button from "@mui/material/Button";
+import PhoneNumber from "./PhoneNumber";
 
 const Container = tw.div`relative`;
-
 
 const Heading = tw.h1`font-bold text-5xl md:text-5xl lg:text-5xl xl:text-5xl text-gray-900 leading-tight`;
 const Paragraph = tw.h2`font-bold text-3xl md:text-4xl lg:text-4xl xl:text-4xl`;
@@ -19,10 +19,9 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
-
-
 const Title = () => {
   const [isHovering, setIsHovering] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -58,10 +57,12 @@ const Title = () => {
             A Tech-Enabled Truck Logistics and Sales company in Nigeria.
           </Paragraph>
         </span>
+        <PhoneNumber open={open} setOpen={setOpen} />
         <span className="d-flex justify-content-center align-items-center mb-5 mt-5">
           <Button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={() => setOpen(!open)}
             variant="outlined"
             color={isHovering ? "secondary" : "primary"}
             style={{
