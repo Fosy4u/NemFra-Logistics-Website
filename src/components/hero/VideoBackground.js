@@ -15,6 +15,7 @@ const VideoBackground = ({ children, showWhite }) => {
         }}
       >
         <NavBar showWhite={showWhite} />
+
         <video
           src={Video2}
           autoPlay
@@ -24,9 +25,10 @@ const VideoBackground = ({ children, showWhite }) => {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
-            display: "block",
+            objectFit: "cover"
+            
           }}
+          type="video/mp4"
         />
         <div
           style={{
