@@ -39,7 +39,7 @@ export default function PhoneNumber({ open, setOpen }) {
         message={
           <span className="d-flex">
             <span className="d-flex me-1">
-              <a href="tel:+2347061146501">
+              <a href="tel:+2347061146501" className="d-flex me-1">
                 <Phone className="brandPrimary me-1" /> +2347061146501
               </a>
             </span>
