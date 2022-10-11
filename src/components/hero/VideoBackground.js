@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "./Title";
 import NavBar from "components/hero/NavBar";
-import Video2 from "../../images/pexels-michael-gault-5266052.mp4";
+// import Video2 from "../../images/pexels-michael-gault-5266052.mp4";
+import Video2 from "../../images/customVideo.mp4";
 
 const VideoBackground = ({ children, showWhite }) => {
   return (

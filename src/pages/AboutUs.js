@@ -53,9 +53,12 @@ export default () => {
         //   backgroundSize: "cover",
         // }}
         style={{
-          background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ), url(${"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHCAcHBwgHBwcHBw0HBwcHBw8ICQcKFREWFhURExMYHSggGCYlJxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NDysZFRkrNzcrKy0rKy0rKysrLS0rKystLS0rKy0rLSstNystKysrLSsrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBwT/xAAYEAEBAQEBAAAAAAAAAAAAAAAAARESAv/EABgBAQEBAQEAAAAAAAAAAAAAAAEAAgME/8QAFxEBAQEBAAAAAAAAAAAAAAAAABEBEv/aAAwDAQACEQMRAD8A8TAe1gipGohqxqMxuHGdWNxmNxpjWo3GY1Gsc9bjcYjcaxz1ry3GI3GmNWNMxosrFQLJWaqUFms1qs0NYxWa3WKzrpjFYrdZrOt451iulYrLpjFZrVZobxlKtRlpAA0AJAEKWLEaiZWNRI1GmdWNxmNQsa3G4xGo1jGtxuMRqNMa3GoxGpWmNbWViVdLMbGdEIuomlqMKzS1m0HErNWs1nW8ZrNarNZ1vGKxW6zQ6YxWa1Way1jNZaqDW8ZoUZaAEggQpWoy1Cy1GoysLOtxqMRqFjW41GI1GmddJVlYlalLG43K1K5yrpZjpq656umiN6axppojeprOmiqLalqalorULWaWs2hrMKzVrNDWM1mrUobxms1qsst4zUWoGsZotQEABCAQqxFhDUWJFLLUajEahGtStSsLKWdx0lWViVZSzHSVdc9XTWY6aaxq6hG9NY01KN6ms6mpRrUtZ01UxbWdNZtBi2s2lrNDWYJS1A1iVBKGkqKyGkoUDQAkAIKrKpNRYyrTLSsqg3KusaukN6usapZjerrGrqEb01jV0iNaazpqUa01nU1KNampqaDGtZtQ1GCWmoDBmgmhmrWQSpRGSAJoASAEhUCFVFQVWVIaXWdVBrTWV0iNausaupRrRnTUI1prOmpRrTWdNSjWpqamoxdNTUSi6gmgggiIICIAIAiAJABAAkKgkqoINCCTWiBDQyupKJpqC6ammlLommhKJqItJqCQIAggkIAIAiAJACQICpRA0KAkAFKIBNCBCqyqSiCSiCSiCSoIkogkCAIAkAIggEogqlAVSC4YAg1hhiZVcXDFWcXGsMUFZGuVwxVjDG+V5UFc1b5OVFWMMbxcUVc8MdMMMVc8MdMTBFWMR0w5UVc8HTlOVFWDG8TlQ1jDG+TBFWBrDFDWBrDBFWRcMEKKBSriq0zUwxY1IhUwxrFws1nF5bkWQiscnLpI1yYOnLleXXleVB048ry68ryYOnHg4d+TlQduHBy+jlOVF24cnDvycqLtw5Tl35TlQ9OPKcu/KciHpx5Tl2vlmwQ9OXKY64liNcsMdLEwGueJjdiWA1jBpA1WRoSFZNSbjTnqylmOkWMaulmOkac5VlI3HSNOU9NT0azHSLHOel6NZjpFYnpejRG1c+l6VZjYx0dFRtGek6FUaKz0nSpi1E6Z6FajTNS+kvoVqKzU1NBzFRLWbQ1mKlTU0NQqGpoaUREk1UEVXQQXV0EllXQLK6ugQur0CC6vQERejoEIdHQEQ6OgCidJoIp0mgGk1NBFLUtAFNTQDSaIJAgCAJP/2Q=="})   no-repeat center fixed `,
-
-          backgroundSize: "100%",
+          background: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ), url(${"/NemfraTruck-resized.jpg"})   no-repeat center fixed `,
+          webkitBackgroundSize: "cover",
+          mozBackgroundSize: "cover",
+          oBackgroundSize: "cover",
+          backgroundSize: "cover",
+          minHeight: "100%",
           height: "100vh",
         }}
       >
