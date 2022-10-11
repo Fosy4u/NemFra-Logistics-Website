@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import Logo2 from "../../images/Logo2.png";
 
@@ -49,7 +48,7 @@ export default ({
   description = "NemFra.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "/",
-  imageSrc = TeamIllustrationSrc,
+  imageSrc = '',
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,

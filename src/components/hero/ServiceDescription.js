@@ -3,8 +3,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Subheading as SubheadingBase } from "components/misc/Headings.js";
-
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
@@ -43,7 +41,7 @@ const ServiceDescription =  ({
   description3 = "",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
-  imageSrc = TeamIllustrationSrc,
+  imageSrc,
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
