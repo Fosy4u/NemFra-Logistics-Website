@@ -12,8 +12,6 @@ import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import loveIllustrationImageSrc from "images/love-illustration.svg";
 import { ReactComponent as ArrowLeftIcon } from "images/arrow-left-3-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg";
-import Truck5 from "../../images/Truck5.png";
-import Truck6 from "../../images/Truck6.png";
 import Foundation from "../../images/Foundation.jpg";
 import Logo2 from "../../images/Logo2.png";
 
@@ -81,7 +79,7 @@ export default ({
   heading = "Our Clients Love Us.",
   description = "",
   textOnLeft = false,
-  charities = [Foundation, Truck6, Truck5],
+  charities = [Foundation],
 }) => {
   const [sliderRef, setSliderRef] = useState(null);
 
