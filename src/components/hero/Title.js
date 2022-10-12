@@ -58,7 +58,7 @@ const Title = () => {
           </Paragraph>
         </span>
         <PhoneNumber open={open} setOpen={setOpen} />
-        <span className="d-flex justify-content-center align-items-center mb-2 mt-3">
+        <span className="d-flex justify-content-center align-items-center mb-2 mt-2">
           <Button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -74,7 +74,7 @@ const Title = () => {
         </span>
 
         <div
-          className="indicator mt-5"
+          className="indicator mt-3"
           onClick={() => {
             window.scrollTo({ top: 770, left: 0, behavior: "smooth" });
           }}
