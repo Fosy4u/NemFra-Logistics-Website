@@ -45,9 +45,9 @@ const Origin = ({ heading = "", subheading = "" }) => {
           NemFra Logistics Limited is a reliable provider of innovative
           logistics and supply-chain service and solutions. We aim at making
           logistic in Nigeria simpler, safer and more efficient. We haul goods
-          accross the states in Nigeria; from manufacturers to wholesalers,
+          accross all the states in Nigeria; from manufacturers to wholesalers,
           retailers and final consumers. As part of our logistic solutions, we
-          equally offer port handlings, custom's clearing documentations and
+          equally offer port handlings, custom's clearing, documentations and
           brokerage services.
         </Description>
         <br />
