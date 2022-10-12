@@ -64,7 +64,7 @@ const VideoBackground = ({ children, showWhite }) => {
             display: "flex",
             flexDirection: "column",
           }}
-          className="mt-5"
+          className="mt-2"
         >
           {<Title />}
         </div>
