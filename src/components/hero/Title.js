@@ -52,13 +52,13 @@ const Title = () => {
           <span tw="text-primary-500">Logistics</span>
         </Heading>
         {/* <span tw="text-primary-500">OnTime! EveryTime!! EveryWhere!!!.</span> */}
-        <span className="mb-5 mt-3">
+        <span className="mb-5 mt-2">
           <Paragraph tw="text-white">
             A Tech-Enabled Truck Logistics and Sales company in Nigeria.
           </Paragraph>
         </span>
         <PhoneNumber open={open} setOpen={setOpen} />
-        <span className="d-flex justify-content-center align-items-center mb-5 mt-5">
+        <span className="d-flex justify-content-center align-items-center mb-2 mt-3">
           <Button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
