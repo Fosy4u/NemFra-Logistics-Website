@@ -1,9 +1,10 @@
 import React from "react";
 import Title from "./Title";
 import NavBar from "components/hero/NavBar";
- import Video2 from "../../images/pexels-michael-gault-5266052.mp4";
+import Video2 from "../../images/pexels-michael-gault-5266052.mp4";
+import tw from "twin.macro";
 
-
+const StyledDiv = tw.div` p-8`;
 const VideoBackground = ({ children, showWhite }) => {
   return (
     <div>
@@ -26,8 +27,7 @@ const VideoBackground = ({ children, showWhite }) => {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover"
-            
+            objectFit: "cover",
           }}
           type="video/mp4"
         />
@@ -51,10 +51,10 @@ const VideoBackground = ({ children, showWhite }) => {
             flexDirection: "column",
           }}
         >
-          {<Title />}
+          <StyledDiv>{<Title />}</StyledDiv>
         </div>
       </div>
-      {children}
+      <StyledDiv>{children}</StyledDiv>
     </div>
   );
 };
