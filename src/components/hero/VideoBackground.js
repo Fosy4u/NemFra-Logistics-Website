@@ -3,8 +3,6 @@ import Title from "./Title";
 import NavBar from "components/hero/NavBar";
 import Video2 from "../../images/pexels-michael-gault-5266052.mp4";
 
-
-
 const VideoBackground = ({ children, showWhite }) => {
   return (
     <div>
@@ -20,10 +18,10 @@ const VideoBackground = ({ children, showWhite }) => {
 
         <video
           src={Video2}
-          autoPlay
-          loop
-          playsinline
-          muted
+          loop={true}
+          muted={true}
+          autoplay={true}
+          playsinline={true}
           style={{
             width: "100%",
             height: "100%",
@@ -51,7 +49,7 @@ const VideoBackground = ({ children, showWhite }) => {
             flexDirection: "column",
           }}
         >
-         {<Title />}
+          {<Title />}
         </div>
       </div>
       {children}
