@@ -92,7 +92,7 @@ export default () => {
             },
             {
               Icon: MoneyIcon,
-              title: "Transpearency",
+              title: "Transparency",
               description:
                 "All our services are rendered with honesty and sincerity without any hidden charges or obscure process. We promise to offer you the best logistic rate we can - at par with the industry standard. As for purchasing trucks, we make sure you buy the best at European price. We are simply open book.",
               iconContainerCss: tw`bg-orange-300 text-orange-800`,

@@ -26,7 +26,6 @@ function CarouselFade() {
       interval="4000"
       style={{ height: "92vh" }}
       indicatorLabels={yes}
-      pause={pause}
     >
       <Carousel.Item onClick={() => setPause(!pause)}>
         <SlideContent2 />

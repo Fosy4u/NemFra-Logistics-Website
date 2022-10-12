@@ -4,12 +4,9 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
-
 import Truck from "../../images/Truck-2-on-white-background2.png";
 
-
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -35,10 +32,6 @@ const IllustrationContainer = tw.div`flex justify-center lg:justify-end items-ce
 const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
-
-
-
-
 
 const SlideContent2 = () => {
   return (
@@ -67,16 +60,14 @@ const SlideContent2 = () => {
             expertise.
           </Paragraph>
 
-          <span className="d-flex justify-content-center align-items-center ms-5">
+          <span className="d-flex justify-content-center align-items-center ms-5 serviceButton">
             <Actions href="/services/roadtransport" className="ms-5">
               <button>Find Out More</button>
             </Actions>
           </span>
-      
         </LeftColumn>
 
         <RightColumn>
-       
           <IllustrationContainer>
             <img
               className="swing"

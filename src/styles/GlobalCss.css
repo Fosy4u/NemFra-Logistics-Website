@@ -252,6 +252,11 @@
 
 /* for mobile */
 @media screen and (max-width: 767px) {
+
+  .serviceButton {
+    margin: 0 auto;
+   
+  }
     .whatsapp-icon {
         margin-top: 10px;
     }
