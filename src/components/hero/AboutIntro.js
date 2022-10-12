@@ -29,7 +29,7 @@ const AboutIntro = () => {
           <p className="quote">
             Our clients and partners are  family to us. Hence we
             render our services passionately with that Motherly care and
-            tranparency.
+            transparency.
           </p>
           <p className="author">
             —{" "}

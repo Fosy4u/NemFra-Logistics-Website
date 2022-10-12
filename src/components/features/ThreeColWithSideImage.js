@@ -98,7 +98,7 @@ export default ({
       imageSrc: SupportIconImage,
       title: "Customer Support",
       description:
-        "We value our customers beyond any measure. Hence our customer support personnels are always ready to answer your questions, provide updates and enure you remain happy and relaxed",
+        "We value our customers beyond any measure. Hence our customer support personnels are always ready to answer your questions, provide updates and ensure you remain happy and relaxed",
     },
     {
       imageSrc: CustomizeIconImage,

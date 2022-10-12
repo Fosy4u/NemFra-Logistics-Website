@@ -96,6 +96,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         name="email"
                         value={email || " "}
                         placeholder="E.g. Foster@mail.com"
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
@@ -159,7 +160,11 @@ const GetQuoteForm = ({ mode, initial }) => {
                   </InputContainer>
                 </span>
 
-                <SubmitButton type="submit" value="Submit">
+                <SubmitButton
+                  type="submit"
+                  value="Submit"
+                  style={{ backgroundColor: "#F15A29" }}
+                >
                   Submit
                 </SubmitButton>
               </form>
