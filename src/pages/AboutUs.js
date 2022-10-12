@@ -16,12 +16,10 @@ import Truck2 from "../images/Truck-1-on-white-background.png";
 import Origin from "components/hero/Origin";
 import Footer from "components/footers/Footer";
 
-
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 const HighlightedText = tw.span`text-primary-500`;
 const StyledDiv = tw.div` p-8`;
 export default () => {
-  const [showWhite, setShowWhite] = useState(false);
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -35,15 +33,10 @@ export default () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      window.scrollY > 660 ? setShowWhite(true) : setShowWhite(false);
-    });
-  });
   return (
     <AnimationRevealPage>
       <StyledDiv>
-        <Hero showWhite={showWhite}/>
+        <Hero showWhite />
         <button
           className={
             show

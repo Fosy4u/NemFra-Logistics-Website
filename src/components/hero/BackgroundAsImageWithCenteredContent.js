@@ -19,7 +19,7 @@ const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 export default ({ showWhite }) => {
   return (
-    <Container>
+    <Container >
       <OpacityOverlay style={{ backgroundColor: "rgba(0, 5, 145, 0.09)" }} />
 
       <HeroContainer>
@@ -27,6 +27,7 @@ export default ({ showWhite }) => {
         <AboutIntro />
         <Content></Content>
       </HeroContainer>
+   
     </Container>
   );
 };
