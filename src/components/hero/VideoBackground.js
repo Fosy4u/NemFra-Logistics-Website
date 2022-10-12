@@ -26,13 +26,10 @@ const VideoBackground = ({ children, showWhite }) => {
           preload="metadata"
         >
         <source src="${Video2}" type="video/mp4" />
-        </video>`,
+        </video>
+        `,
           }}
-          style={{
-            width: "100%",
-            height: "100vh",
-            objectFit: "cover",
-          }}
+          className="vid"
         />
         {/* <video
           src={Video2}
@@ -44,6 +41,7 @@ const VideoBackground = ({ children, showWhite }) => {
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            display: 'block'
           }}
           type="video/mp4"
         /> */}
@@ -54,7 +52,7 @@ const VideoBackground = ({ children, showWhite }) => {
             height: "100%",
             top: "0",
             left: "0",
-            backgroundColor: "rgba(245, 40, 145, 0.09)",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
           }}
         ></div>
         <div

@@ -139,18 +139,7 @@ const HomeBody = () => {
             </>
           }
         />
-        {/* <FeatureWithSteps
-          subheading={<Subheading>STEPS</Subheading>}
-          heading={
-            <>
-              Easy to <HighlightedText>Get Started.</HighlightedText>
-            </>
-          }
-          textOnLeft={false}
-          imageSrc={macHeroScreenshotImageSrc}
-          imageDecoratorBlob={true}
-          decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
-        /> */}
+     
         <MainFeature2
           subheading={<Subheading className="brandPrimary">VALUES</Subheading>}
           primaryButtonText="About Us"
@@ -188,38 +177,7 @@ const HomeBody = () => {
           ]}
         />
 
-        {/* <Testimonial
-          subheading={
-            <Subheading className="brandPrimary">Testimonials</Subheading>
-          }
-          heading={
-            <>
-              Our Clients <HighlightedText>Love Us.</HighlightedText>
-            </>
-          }
-          testimonials={[
-            {
-              stars: 5,
-              profileImageSrc:
-                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-              heading: "Amazing Customer Support Experience",
-              quote:
-                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-              customerName: "Charlotte Hale",
-              customerTitle: "Director, Delos Inc.",
-            },
-            {
-              stars: 5,
-              profileImageSrc:
-                "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-              heading: "Bought my Truck at the best market rate",
-              quote:
-                "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-              customerName: "Adam Cuppy",
-              customerTitle: "Founder, EventsNYC",
-            },
-          ]}
-        /> */}
+        
         <Csr
           subheading={
             <Subheading className="brandPrimary">
