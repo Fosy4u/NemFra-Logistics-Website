@@ -18,10 +18,10 @@ const VideoBackground = ({ children, showWhite }) => {
 
         <video
           src={Video2}
-          loop={true}
-          muted={true}
-          autoplay={true}
-          playsinline={true}
+          autoPlay
+          loop
+          playsinline
+          muted
           style={{
             width: "100%",
             height: "100%",
