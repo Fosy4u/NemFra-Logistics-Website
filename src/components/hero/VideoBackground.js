@@ -15,8 +15,21 @@ const VideoBackground = ({ children, showWhite }) => {
         }}
       >
         <NavBar showWhite={showWhite} />
-
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
         <video
+          loop
+          muted
+          autoplay
+          playsinline
+          preload="metadata"
+        >
+        <source src="${Video2}" type="video/mp4" />
+        </video>`,
+          }}
+        />
+        {/* <video
           src={Video2}
           autoPlay
           loop
@@ -28,7 +41,7 @@ const VideoBackground = ({ children, showWhite }) => {
             objectFit: "cover",
           }}
           type="video/mp4"
-        />
+        /> */}
         <div
           style={{
             position: "absolute",
