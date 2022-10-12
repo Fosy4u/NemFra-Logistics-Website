@@ -28,6 +28,11 @@ const VideoBackground = ({ children, showWhite }) => {
         <source src="${Video2}" type="video/mp4" />
         </video>`,
           }}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
         />
         {/* <video
           src={Video2}
