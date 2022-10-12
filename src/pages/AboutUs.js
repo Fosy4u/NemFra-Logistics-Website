@@ -111,7 +111,7 @@ export default () => {
               Franca Ogwudu <HighlightedText>Foundation</HighlightedText>
             </>
           }
-          description='As our name was coined from "Nne m Franca" - "My Mother Franca", we partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged'
+          description='We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged'
         />
         <Footer />
       </StyledDiv>
