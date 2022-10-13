@@ -7,7 +7,6 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -27,7 +26,7 @@ import { ReactComponent as Phone } from "feather-icons/dist/icons/phone.svg";
 import { ReactComponent as Mail } from "feather-icons/dist/icons/mail.svg";
 import { ReactComponent as Close } from "feather-icons/dist/icons/x.svg";
 import { ReactComponent as Linkedin } from "feather-icons/dist/icons/linkedin.svg";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
