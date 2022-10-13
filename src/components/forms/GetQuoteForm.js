@@ -6,7 +6,7 @@ import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.sv
 
 import { Radio } from "@material-tailwind/react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-12 lg:py-12`;
