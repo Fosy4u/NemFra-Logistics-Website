@@ -38,12 +38,21 @@ const SvgDotPattern1 = tw(
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
 const ContactUsForm = () => {
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [phoneNo, setPhoneNo] = useState()
-  const [message, setMessage] = useState()
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phoneNo, setPhoneNo] = useState();
+  const [message, setMessage] = useState();
 
- 
+  const handleSubmit = () => {
+    const payload = {
+      name,
+      email,
+      phoneNo,
+      message,
+    };
+    console.log(payload);
+  };
+
   return (
     <Container>
       <Content>
@@ -59,7 +68,7 @@ const ContactUsForm = () => {
                       type="text"
                       name="name"
                       placeholder="E.g. John Joe"
-                      onChange={(e)=> setName(e.target.value)}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </InputContainer>
                   <InputContainer>
@@ -69,7 +78,7 @@ const ContactUsForm = () => {
                       type="email"
                       name="email"
                       placeholder="E.g. John@mail.com"
-                      onChange={(e)=> setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </InputContainer>
                   <InputContainer>
@@ -79,7 +88,7 @@ const ContactUsForm = () => {
                       type="text"
                       name="name"
                       placeholder="E.g. 08098767***"
-                      onChange={(e)=> setPhoneNo(e.target.value)}
+                      onChange={(e) => setPhoneNo(e.target.value)}
                     />
                   </InputContainer>
                 </Column>
@@ -90,7 +99,7 @@ const ContactUsForm = () => {
                       id="message-input"
                       name="message"
                       placeholder="E.g. Details about your enquiry"
-                      onChange={(e)=> setMessage(e.target.value)}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </InputContainer>
                 </Column>
@@ -100,6 +109,7 @@ const ContactUsForm = () => {
                 type="submit"
                 value="Submit"
                 style={{ backgroundColor: "#F15A29" }}
+                onClick={handleSubmit}
               >
                 Submit
               </SubmitButton>

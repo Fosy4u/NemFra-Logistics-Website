@@ -57,15 +57,36 @@ const GetQuoteForm = ({ mode, initial }) => {
   const [manufacturer, setManufacturer] = useState();
   const [truckType, setTruckType] = useState();
   const [tonnage, setTonnage] = useState();
-  const [Axle, setAxle] = useState();
+  const [axle, setAxle] = useState();
   const [transmission, setTransmission] = useState();
-  const [message, setMessage] = useState();
 
   useEffect(() => {
     if (initial?.email) {
       setEmail(initial?.email);
     }
   }, [initial]);
+
+  const handleSubmit = () => {
+    const payload = {
+      firstName,
+      lastName,
+      email,
+      phoneNo,
+      companyName,
+      goodsType,
+      pickUpLocation,
+      pickUpDate,
+      destination,
+      otherInformation,
+      axle,
+      transmission,
+      tonnage,
+      insurrance,
+      manufacturer,
+      truckType,
+    };
+    console.log(payload);
+  };
 
   return (
     <Container>
@@ -84,7 +105,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                     onClick={() => setCustomeType("individual")}
                   />
                   <span className="mt-3">Company</span>
-                 
+
                   <Radio
                     color="purple"
                     id="Individual"
@@ -204,6 +225,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                   type="submit"
                   value="Submit"
                   style={{ backgroundColor: "#F15A29" }}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </SubmitButton>
@@ -347,6 +369,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                   type="submit"
                   value="Submit"
                   style={{ backgroundColor: "#F15A29" }}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </SubmitButton>
