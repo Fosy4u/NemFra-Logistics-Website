@@ -9,6 +9,7 @@ import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as Linkedin } from "feather-icons/dist/icons/linkedin.svg";
 import { ReactComponent as InstagramIcon } from "feather-icons/dist/icons/instagram.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
+import { Link } from "react-router-dom";
 
 const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
@@ -20,7 +21,7 @@ const ColumnHeading = tw.h5`uppercase font-bold`;
 
 const LinkList = tw.ul`mt-6 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3 hover:text-orange-600`;
-const Link = tw.a`border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300 hover:text-orange-600`;
+const LinkItem = tw.p`border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300 hover:text-orange-600`;
 
 const Divider = tw.div`my-16 border-b-2 border-primary-400 w-full`;
 
@@ -28,7 +29,6 @@ const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-betwee
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-16`;
-
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400`;
 
@@ -67,13 +67,21 @@ const Footer = () => {
             <ColumnHeading>Main</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/">Home</Link>
+                <Link to="/">
+                  <LinkItem>Home</LinkItem>
+                </Link>
               </LinkListItem>
+
               <LinkListItem>
-                <Link href="/aboutUs">About Us</Link>
+                <Link to="/aboutUs">
+                  <LinkItem>About Us</LinkItem>{" "}
+                </Link>
               </LinkListItem>
+
               <LinkListItem>
-                <Link href="/services">Services</Link>
+                <Link to="/services">
+                  <LinkItem>Services</LinkItem>{" "}
+                </Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -81,13 +89,19 @@ const Footer = () => {
             <ColumnHeading>Services</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/services/roadtransport">Road Transportation</Link>
+                <Link to="/services/roadtransport">
+                  <LinkItem>Road Transportation</LinkItem>
+                </Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/services/trucksales">Truck Sales</Link>
+                <Link to="/services/trucksales">
+                  <LinkItem>Truck Sales</LinkItem>
+                </Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/services/customclearing">Custom Clearing</Link>
+                <Link to="/services/customclearing">
+                  <LinkItem>Custom Clearing</LinkItem>
+                </Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -96,10 +110,15 @@ const Footer = () => {
             <ColumnHeading>Legal</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="/policies">Privacy Policy</Link>
+                <Link to="/policies">
+                  <LinkItem>Privacy Policy</LinkItem>
+                </Link>
               </LinkListItem>
+
               <LinkListItem>
-                <Link href="/policies">Terms and Conditions</Link>
+                <Link to="/policies">
+                  <LinkItem>Terms and Conditions</LinkItem>
+                </Link>
               </LinkListItem>
             </LinkList>
           </Column>

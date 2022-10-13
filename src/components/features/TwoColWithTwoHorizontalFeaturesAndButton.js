@@ -10,6 +10,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { useNavigate } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -63,7 +64,6 @@ const PrimaryButton = styled(PrimaryButtonBase)((props) => [
   props.buttonRounded && tw`rounded-full`,
 ]);
 
-
 export default ({
   subheading = "Our Expertise",
   heading = (
@@ -74,7 +74,7 @@ export default ({
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   primaryButtonText = "",
   primaryButtonUrl = "",
-  imageSrc = '',
+  imageSrc = "",
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
@@ -88,10 +88,8 @@ export default ({
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
-  /*
-   * Change the features variable as you like, add or delete objects
-   * `icon` must be a React SVG component. See how BriefcaseIcon is imported above. For a full list of available icons, see Feather Icons.
-   */
+  const navigate = useNavigate();
+
   const defaultFeatures = [
     {
       Icon: MoneyIcon,
@@ -141,8 +139,7 @@ export default ({
 
             <PrimaryButton
               buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
+              onClick={() => navigate(primaryButtonUrl)}
             >
               {primaryButtonText}
             </PrimaryButton>

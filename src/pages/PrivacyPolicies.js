@@ -76,9 +76,9 @@ const PrivacyPolicies = () => {
           <FAQ
             subheading={<Subheading>Privacy Policies</Subheading>}
             heading={
-              <>
+              <span tw="text-white">
                 Read our <HighlightedText>Privacy Policy </HighlightedText>
-              </>
+              </span>
             }
             faqs={[
               {

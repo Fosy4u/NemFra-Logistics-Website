@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -38,6 +38,12 @@ const SvgDotPattern1 = tw(
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
 const ContactUsForm = () => {
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [phoneNo, setPhoneNo] = useState()
+  const [message, setMessage] = useState()
+
+ 
   return (
     <Container>
       <Content>
@@ -52,7 +58,8 @@ const ContactUsForm = () => {
                       id="name-input"
                       type="text"
                       name="name"
-                      placeholder="E.g. Foster Ogwudu"
+                      placeholder="E.g. John Joe"
+                      onChange={(e)=> setName(e.target.value)}
                     />
                   </InputContainer>
                   <InputContainer>
@@ -61,7 +68,8 @@ const ContactUsForm = () => {
                       id="email-input"
                       type="email"
                       name="email"
-                      placeholder="E.g. Foster@mail.com"
+                      placeholder="E.g. John@mail.com"
+                      onChange={(e)=> setEmail(e.target.value)}
                     />
                   </InputContainer>
                   <InputContainer>
@@ -71,6 +79,7 @@ const ContactUsForm = () => {
                       type="text"
                       name="name"
                       placeholder="E.g. 08098767***"
+                      onChange={(e)=> setPhoneNo(e.target.value)}
                     />
                   </InputContainer>
                 </Column>
@@ -81,6 +90,7 @@ const ContactUsForm = () => {
                       id="message-input"
                       name="message"
                       placeholder="E.g. Details about your enquiry"
+                      onChange={(e)=> setMessage(e.target.value)}
                     />
                   </InputContainer>
                 </Column>

@@ -6,6 +6,7 @@ import Truck6 from "../../images/Truck6.png";
 import { css } from "styled-components/macro";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
+import { useNavigate } from "react-router-dom";
 
 
 const Container = tw.div`relative`;
@@ -16,7 +17,7 @@ const RightColumn = tw.div`relative mt-12 lg:mt-0 flex-1 flex flex-col justify-c
 const Heading = tw.p`font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight`;
 const Paragraph = tw.p`my-5 lg:my-8 text-base xl:text-lg`;
 
-const Actions = styled.a`
+const Actions = styled.div`
   ${tw`relative max-w-md text-center mx-auto lg:mx-0 `}
   input {
     ${tw`sm:pr-48 pl-8 py-4 sm:py-5 rounded-full border-2 w-full font-medium focus:outline-none transition duration-300  focus:border-primary-500 hover:border-gray-500`}
@@ -36,6 +37,7 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 
 
 const SlideContent3 = () => {
+  const navigate = useNavigate()
   return (
     <Container className="mt-5">
       <TwoColumn>
@@ -53,8 +55,8 @@ const SlideContent3 = () => {
             only make payment when delivered
           </Paragraph>
           <span className="d-flex justify-content-center align-items-center ms-5">
-            <Actions href="/services/trucksales" className="ms-5">
-              <button>Find Out More</button>
+            <Actions className="ms-5">
+              <button onClick={() => navigate("/services/trucksales/")}>Find Out More</button>
             </Actions>
           </span>
          

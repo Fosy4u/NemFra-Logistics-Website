@@ -6,6 +6,7 @@ import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.sv
 
 import { Radio } from "@material-tailwind/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-12 lg:py-12`;
@@ -42,7 +43,23 @@ const SvgDotPattern1 = tw(
 
 const GetQuoteForm = ({ mode, initial }) => {
   const [customerType, setCustomeType] = useState("individual");
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
+  const [phoneNo, setPhoneNo] = useState();
+  const [goodsType, setGoodsType] = useState();
+  const [pickUpLocation, setPickUpLocation] = useState();
+  const [destination, setDestination] = useState();
+  const [companyName, setCompanyName] = useState();
+  const [pickUpDate, setPickUpDate] = useState();
+  const [insurrance, setInsurrance] = useState();
+  const [otherInformation, setOtherInformation] = useState();
+  const [manufacturer, setManufacturer] = useState();
+  const [truckType, setTruckType] = useState();
+  const [tonnage, setTonnage] = useState();
+  const [Axle, setAxle] = useState();
+  const [transmission, setTransmission] = useState();
+  const [message, setMessage] = useState();
 
   useEffect(() => {
     if (initial?.email) {
@@ -67,6 +84,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                     onClick={() => setCustomeType("individual")}
                   />
                   <span className="mt-3">Company</span>
+                 
                   <Radio
                     color="purple"
                     id="Individual"
@@ -85,6 +103,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         id="email-input"
                         type="text"
                         placeholder="E.g.Foster"
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
                     </InputContainer>
 
@@ -95,7 +114,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         type="email"
                         name="email"
                         value={email || " "}
-                        placeholder="E.g. Foster@mail.com"
+                        placeholder="E.g. John@mail.com"
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </InputContainer>
@@ -106,45 +125,65 @@ const GetQuoteForm = ({ mode, initial }) => {
                         type="text"
                         name="name"
                         placeholder="E.g. 08098767***"
+                        onChange={(e) => setPhoneNo(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="email-input"> Type of Goods</Label>
-                      <Input type="text" placeholder="E.g. Beaverages" />
+                      <Input
+                        type="text"
+                        placeholder="E.g. Beaverages"
+                        onChange={(e) => setGoodsType(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="email-input"> Pick Up Location</Label>
                       <Input
                         type="text"
                         placeholder="E.g.   35 Marina Street, Lagos Island, Lagos"
+                        onChange={(e) => setPickUpLocation(e.target.value)}
                       />
                     </InputContainer>
                   </Column>
                   <Column>
                     <InputContainer>
                       <Label>Last Name</Label>
-                      <Input type="text" placeholder="E.g. Ogwudu" />
+                      <Input
+                        type="text"
+                        placeholder="E.g. Joe"
+                        onChange={(e) => setLastName(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label> Company Name</Label>
                       <Input
                         type="text"
                         placeholder="E.g. NemFra Logistics LTD"
+                        onChange={(e) => setCompanyName(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
                       <Label>PickUp Date</Label>
-                      <Input type="date" name="name" />
+                      <Input
+                        type="date"
+                        name="name"
+                        onChange={(e) => setPickUpDate(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label>Are the Goods Insured? (Yes or No)</Label>
-                      <Input type="text" name="name" />
+                      <Input
+                        type="text"
+                        name="name"
+                        onChange={(e) => setInsurrance(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="email-input"> Delivery Location</Label>
                       <Input
                         type="text"
                         placeholder="E.g. 16 Amawbia Street, Uwani Enugu"
+                        onChange={(e) => setDestination(e.target.value)}
                       />
                     </InputContainer>
                   </Column>
@@ -156,6 +195,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                       id="message-input"
                       name="message"
                       placeholder="E.g. Details about your enquiry"
+                      onChange={(e) => setOtherInformation(e.target.value)}
                     />
                   </InputContainer>
                 </span>
@@ -204,6 +244,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         id="email-input"
                         type="text"
                         placeholder="E.g.Foster"
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
                     </InputContainer>
 
@@ -215,6 +256,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         name="email"
                         value={email || " "}
                         placeholder="E.g. Foster@mail.com"
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
@@ -224,30 +266,41 @@ const GetQuoteForm = ({ mode, initial }) => {
                         type="text"
                         name="name"
                         placeholder="E.g. 08098767***"
+                        onChange={(e) => setPhoneNo(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="email-input"> Manfacturer</Label>
-                      <Input type="text" placeholder="E.g. DAF, Scannia" />
+                      <Input
+                        type="text"
+                        placeholder="E.g. DAF, Scannia"
+                        onChange={(e) => setManufacturer(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label htmlFor="email-input"> Type</Label>
                       <Input
                         type="text"
                         placeholder="E.g.   Tractor Unit, Tipper"
+                        onChange={(e) => setTruckType(e.target.value)}
                       />
                     </InputContainer>
                   </Column>
                   <Column>
                     <InputContainer>
                       <Label>Last Name</Label>
-                      <Input type="text" placeholder="E.g. Ogwudu" />
+                      <Input
+                        type="text"
+                        placeholder="E.g. Ogwudu"
+                        onChange={(e) => setLastName(e.target.value)}
+                      />
                     </InputContainer>
                     <InputContainer>
                       <Label> Company Name</Label>
                       <Input
                         type="text"
                         placeholder="E.g. NemFra Logistics LTD"
+                        onChange={(e) => setCompanyName(e.target.value)}
                       />
                     </InputContainer>
 
@@ -257,6 +310,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                         type="text"
                         name="name"
                         placeholder="E.g. 30 Tonnes"
+                        onChange={(e) => setTonnage(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
@@ -264,11 +318,16 @@ const GetQuoteForm = ({ mode, initial }) => {
                       <Input
                         type="text"
                         placeholder="E.g. Manual or Automatic"
+                        onChange={(e) => setTransmission(e.target.value)}
                       />
                     </InputContainer>
                     <InputContainer>
                       <Label> Axles</Label>
-                      <Input type="text" placeholder="E.g. 4 x 2, 6 x 2" />
+                      <Input
+                        type="text"
+                        placeholder="E.g. 4 x 2, 6 x 2"
+                        onChange={(e) => setAxle(e.target.value)}
+                      />
                     </InputContainer>
                   </Column>
                 </TwoColumn>
@@ -279,6 +338,7 @@ const GetQuoteForm = ({ mode, initial }) => {
                       id="message-input"
                       name="message"
                       placeholder="E.g. Details about your enquiry"
+                      onChange={(e) => setOtherInformation(e.target.value)}
                     />
                   </InputContainer>
                 </span>

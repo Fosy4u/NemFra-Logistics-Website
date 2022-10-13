@@ -110,6 +110,7 @@ const HomeBody = () => {
             imageSrc={Truck2}
             imageBorder={true}
             imageDecoratorBlob={true}
+
           />
           <MainFeature
             description="No more need to pay exorbitant prices for purchase of trucks when you can shop directly from European market and get it delivered to you within two weeks. We assist you through the process starting from linking you to our European Market, helping you select the right truck and assisting with the shipping, clearing and delivering to your door step. Meanwhile, you can choose not to pay until delivery of your truck"
@@ -118,6 +119,7 @@ const HomeBody = () => {
             imageSrc={TruckSales}
             imageBorder={true}
             imageDecoratorBlob={true}
+            textOnLeft= {false}
           />
           <MainFeature
             description="We handle all custom documentation and clearance without any ambiguities in charges or bureaucracies. We can as well transport your cargo to your door step"
@@ -189,7 +191,7 @@ const HomeBody = () => {
               Franca Ogwudu <HighlightedText>Foundation</HighlightedText>
             </>
           }
-          description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged"
+          description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged."
         />
 
         <GetStarted />

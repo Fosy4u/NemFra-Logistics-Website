@@ -144,6 +144,7 @@ export default ({
             <Close />
           </span>
         </DialogHeader>
+        <DialogContent>
         <div className="d-flex justify-content-between">
           <div className="d-flex flex-column mt-2">
             <span className="d-flex">
@@ -175,6 +176,7 @@ export default ({
           </span>
         </div>
         <ContactUsForm />
+        </DialogContent>
       </Dialog>
       <Dialog
         open={showQuote}

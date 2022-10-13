@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -27,6 +27,7 @@ import { ReactComponent as Phone } from "feather-icons/dist/icons/phone.svg";
 import { ReactComponent as Mail } from "feather-icons/dist/icons/mail.svg";
 import { ReactComponent as Close } from "feather-icons/dist/icons/x.svg";
 import { ReactComponent as Linkedin } from "feather-icons/dist/icons/linkedin.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
@@ -62,6 +63,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function NavBar(props) {
+  const navigate = useNavigate();
   const { window, showWhite, icon } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [show, setShow] = useState(false);
@@ -73,6 +75,10 @@ export default function NavBar(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleNav = (link) => {
+    navigate(link);
+  };
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <LogoLink href="/">
@@ -82,11 +88,12 @@ export default function NavBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText>
-                {item.link && <a href={item.link}>{item.label}</a>}
-                {!item.link && <p onClick={handleShow}>{item.label}</p>}
-              </ListItemText>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => handleNav(item.link)}
+            >
+              {item.link && <p>{item.label}</p>}
+              {!item.link && <p onClick={handleShow}>{item.label}</p>}
             </ListItemButton>
           </ListItem>
         ))}
@@ -195,7 +202,11 @@ export default function NavBar(props) {
                 <span tw="text-primary-500">
                   <Phone />
                 </span>
-                <span className="brandPrimary ms-2">+2347061146501</span>
+
+                <span className="brandPrimary ms-2">
+                  {" "}
+                  <a href="tel:+2347061146501">+2347061146501</a>
+                </span>
               </span>
             </div>
             <span>

@@ -1,13 +1,14 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavLinks = tw.div`inline-block`;
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 
+export const NavLink = tw.span` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-orange-600 hocus:text-primary-500
 `;
@@ -32,22 +33,27 @@ const Nav = ({ roundedHeaderButton, showWhite = "false", handleShow }) => {
     <div>
       {" "}
       <NavLinks key={1}>
-        <NavLink href="/" className={`${showWhite ? " " : "text-white"}`}>
-          Home
-        </NavLink>
+        <Link to="/">
+          <NavLink  className={`${showWhite ? " " : "text-white"}`}>
+            Home
+          </NavLink>
+        </Link>
+        <Link to="/aboutUs">
         <NavLink
           className={`${showWhite ? " " : "text-white"}`}
-          href="/aboutUs"
+        
         >
           About
         </NavLink>
+        </Link>
+        <Link to="/services">
         <NavLink
           className={`${showWhite ? " " : "text-white"}`}
-          href="/services"
+      
         >
           Services
         </NavLink>
-
+        </Link>
         <PrimaryLink
           css={roundedHeaderButton && tw`rounded-full`}
           onClick={handleShow}

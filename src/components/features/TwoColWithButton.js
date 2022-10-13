@@ -6,6 +6,7 @@ import { Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import Logo2 from "../../images/Logo2.png";
+import { useNavigate } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -48,7 +49,7 @@ export default ({
   description = "NemFra.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "/",
-  imageSrc = '',
+  imageSrc = "",
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
@@ -59,6 +60,7 @@ export default ({
   textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -78,10 +80,10 @@ export default ({
             <Subheading>{subheading}</Subheading>
             {/* <Heading>{heading}</Heading> */}
             <Description>{description}</Description>
+
             <PrimaryButton
               buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
+              onClick={() => navigate(primaryButtonUrl)}
             >
               {primaryButtonText}
             </PrimaryButton>
