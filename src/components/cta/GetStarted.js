@@ -191,13 +191,13 @@ export default ({
             </div>
             <span>
               <SocialLinksContainer>
-                <SocialLink href="https://facebook.com">
+                <SocialLink href="https://www.facebook.com/people/NemFra-Logistics/100086480844160/">
                   <FacebookIcon />
                 </SocialLink>
-                <SocialLink href="https://twitter.com">
+                <SocialLink href="https://www.instagram.com/nemfra_logistics/">
                   <InstagramIcon />
                 </SocialLink>
-                <SocialLink href="https://twitter.com">
+                <SocialLink href="https://www.linkedin.com/company/nemfra-logistics/">
                   <Linkedin />
                 </SocialLink>
               </SocialLinksContainer>
