@@ -4,7 +4,7 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
-import Truck from "../../images/Truck-2-on-white-background2.png";
+import Truck from "../../images/Truck-1-on-white-background.png";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import { useNavigate } from "react-router-dom";

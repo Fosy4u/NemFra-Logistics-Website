@@ -12,7 +12,8 @@ import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg
 import { ReactComponent as Heart } from "feather-icons/dist/icons/heart.svg";
 import Hero from "components/hero/BackgroundAsImageWithCenteredContent.js";
 
-import Truck2 from "../images/Truck-1-on-white-background.png";
+// import Truck2 from "../images/Truck-1-on-white-background.png";
+import Brand1 from "../images/brand1.JPG";
 import Origin from "components/hero/Origin";
 import Footer from "components/footers/Footer";
 
@@ -73,7 +74,7 @@ export default () => {
               We Live By Our <HighlightedText>Principles.</HighlightedText>
             </>
           }
-          imageSrc={Truck2}
+          imageSrc={Brand1}
           showDecoratorBlob={false}
           features={[
             {
@@ -98,6 +99,7 @@ export default () => {
               iconContainerCss: tw`bg-orange-300 text-orange-800`,
             },
           ]}
+          textOnLeft={false}
         />
 
         <Csr
@@ -111,7 +113,7 @@ export default () => {
               Franca Ogwudu <HighlightedText>Foundation</HighlightedText>
             </>
           }
-          description='We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged'
+          description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged"
         />
         <Footer />
       </StyledDiv>

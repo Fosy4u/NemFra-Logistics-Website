@@ -10,12 +10,13 @@ import { SectionHeading } from "components/misc/Headings.js";
 import styled from "styled-components";
 import Logo2 from "../images/Logo2.png";
 import Truck2 from "../images/Truck2OrangeBg.JPG";
-import Custom from "../images/customClearing.jpeg";
+
 import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg";
 import TruckSales2 from "../images/TruckSales2.png";
 import NavBar from "components/hero/NavBar";
 import ServiceDescription from "components/hero/ServiceDescription";
 import OtherServices from "components/hero/OtherServices";
+import Custom1 from "../images/custom1.JPG";
 
 
 const cards = [
@@ -96,7 +97,7 @@ const CustomClearing = () => {
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
           subheading={<Subheading>Clearing Made Simple</Subheading>}
           imageSrc={
-           Custom
+           Custom1
           }
           imageBorder={true}
           imageDecoratorBlob={true}

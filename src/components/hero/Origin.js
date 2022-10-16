@@ -9,6 +9,7 @@ import {
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import Logo2 from "../../images/Logo2.png";
 
+
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
 const Description = tw.p`text-center mx-auto`;
