@@ -57,7 +57,7 @@ const Quote = () => {
           }}
         >
           <PopoverHandler>
-            <button>Get Quote</button>
+            <button title="Get Quote">Get Quote</button>
           </PopoverHandler>
           <PopoverContent className="d-flex flex-column">
             <Span

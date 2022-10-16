@@ -107,27 +107,32 @@ const HomeBody = () => {
           <MainFeature
             description="Freight over land using trucks of all sizes where possible keeping transit time and costs at their lowest. Monitoring the movement all over the route and tracking from source to delivery point"
             subheading={<Subheading>Road Transportation / Haulage</Subheading>}
-            primaryButtonUrl="/services/roadtransport"
+            primaryButtonUrl="/services/road-transport"
             imageSrc={Truck2}
             imageBorder={false}
             imageDecoratorBlob={true}
+            imageAlt={"NemFra Logistics Truck"}
+            buttonTitle="Learn More"
           />
           <MainFeature
             description="No more need to pay exorbitant prices for the purchase of trucks when you can shop directly from the European market and get it delivered to you within two weeks. We assist you through the process, starting from linking you to our European Market, helping you select the right truck and assisting with the shipping, clearing and delivering to your doorstep. Meanwhile, you can choose not to pay until the delivery of your truck"
             subheading={<Subheading>Truck Sales</Subheading>}
-            primaryButtonUrl="/services/trucksales"
+            primaryButtonUrl="/services/truck-sales"
             imageSrc={TruckSales}
             imageBorder={true}
             imageDecoratorBlob={true}
             textOnLeft={false}
+            imageAlt={"NemFra Logistics Truck"}
+            buttonTitle="Learn More"
           />
           <MainFeature
             description="We handle all custom documentation and clearance without any ambiguities in charges or bureaucracies. We can as well transport your cargo to your door step"
             subheading={<Subheading>Custom Clearance</Subheading>}
-            primaryButtonUrl="/services/customclearing"
+            primaryButtonUrl="/services/custom-clearing"
             imageSrc={Custom1}
             imageBorder={true}
             imageDecoratorBlob={true}
+            imageAlt={"NemFra Logistics"}
           />
         </span>
         <Quote />
@@ -141,16 +146,17 @@ const HomeBody = () => {
         />
 
         <Tech
-          description="We become delivery partners to your business, we solve your logistics, truck procurement and custom's problems together, we save you time and money and drive the efficiency of your business through the power of technology, network and modern trucks."
+          description="We become delivery partners to your business, we solve your logistics, truck procurement and custom's problems together. We save you time and money and drive the efficiency of your business through the power of technology, network and modern trucks."
           imageSrc={Tech1}
           imageBorder={false}
           imageDecoratorBlob={true}
+          imageAlt="NemFra Logistics network"
         />
 
         <MainFeature2
           subheading={<Subheading className="brandPrimary">VALUES</Subheading>}
           primaryButtonText="Learn About Us"
-          primaryButtonUrl="/aboutUs"
+          primaryButtonUrl="/about-us"
           description="Our objective is to be the most transparent, standard, and safest brand in Nigeria. We are committed to making our customers happy and relaxed by simplifying logistics and making truck procurement as affordable as possible by assisting you in buying directly from European market. "
           heading={
             <>
@@ -182,6 +188,8 @@ const HomeBody = () => {
               iconContainerCss: tw`bg-orange-300 text-orange-800`,
             },
           ]}
+          imageAlt="NemFra Logistics logo"
+          buttonTitle="Learn About Us"
         />
 
         <Csr
@@ -196,6 +204,7 @@ const HomeBody = () => {
             </>
           }
           description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less privileged."
+          imageAlt="The smallest act of kindness is worth more than the grandest intention"
         />
 
         <GetStarted />

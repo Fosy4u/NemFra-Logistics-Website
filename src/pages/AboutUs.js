@@ -24,6 +24,8 @@ export default () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    document.title =
+      "About Us - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     window.addEventListener("scroll", (e) => {
       window.scrollY > 200 ? setShow(true) : setShow(false);
     });
@@ -100,6 +102,8 @@ export default () => {
             },
           ]}
           textOnLeft={false}
+          imageAlt="NemFra Logistics logo"
+          buttonTitle="Our services"
         />
 
         <Csr
@@ -114,6 +118,7 @@ export default () => {
             </>
           }
           description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less privileged"
+          imageAlt="The smallest act of kindness is worth more than the grandest intention"
         />
         <Footer />
       </StyledDiv>

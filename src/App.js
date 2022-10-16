@@ -12,7 +12,6 @@ import TruckSales from "pages/TruckSales";
 import CustomClearing from "pages/CustomClearing";
 import PrivacyPolicies from "pages/PrivacyPolicies";
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -34,12 +33,15 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SaaSProductLandingPage />} />
-          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/policies" element={<PrivacyPolicies />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/roadtransport" element={<RoadTransport />} />
-          <Route path="/services/trucksales" element={<TruckSales />} />
-          <Route path="/services/customclearing" element={<CustomClearing />} />
+          <Route path="/services/road-transport" element={<RoadTransport />} />
+          <Route path="/services/truck-sales" element={<TruckSales />} />
+          <Route
+            path="/services/custom-clearing"
+            element={<CustomClearing />}
+          />
         </Routes>
       </Router>
     </ThemeProvider>

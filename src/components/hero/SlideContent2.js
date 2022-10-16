@@ -56,15 +56,18 @@ const SlideContent2 = () => {
           <span tw="text-primary-500">OnTime! EveryTime!! EveryWhere!!!.</span>
           <Paragraph>
             With our modern and environmentally friendly trucks, we are able to
-            deliver at any location within Nigeria. We scrutinize the small print
-            to identify where we might save you time and money. You’ll have
-            specialized trucks driven by uniformed drivers with extensive
+            deliver at any location within Nigeria. We scrutinise the small
+            print to identify where we might save you time and money. You’ll
+            have specialised trucks driven by uniformed drivers with extensive
             expertise.
           </Paragraph>
 
           <span className="d-flex justify-content-center align-items-center ms-5 serviceButton">
             <Actions className="ms-5">
-              <button onClick={() => navigate("/services/roadtransport/")}>
+              <button
+                onClick={() => navigate("/services/road-transport/")}
+                title="Find out more"
+              >
                 Find Out More
               </button>
             </Actions>
@@ -78,7 +81,7 @@ const SlideContent2 = () => {
               style={{}}
               tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
               src={Truck}
-              alt="Design Illustration"
+              alt="Road transportation"
             />
           </IllustrationContainer>
         </RightColumn>

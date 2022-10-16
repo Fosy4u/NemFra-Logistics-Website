@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import "../styles/GlobalCss.css";
@@ -6,7 +6,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/Footer.js";
 import Quote from "components/hero/Quote";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeadingTop } from "components/misc/Headings.js";
 import styled from "styled-components";
 import Logo2 from "../images/Logo2.png";
 import Truck2 from "../images/Truck2OrangeBg.JPG";
@@ -18,34 +18,33 @@ import ServiceDescription from "components/hero/ServiceDescription";
 import OtherServices from "components/hero/OtherServices";
 import Custom1 from "../images/custom1.JPG";
 
-
 const cards = [
   {
     imageSrc: Truck2,
     company: "Road Transportation.",
     type: "Ad Campaign",
     title: "Get your goods moved to anywhere in Nigeria",
-  
-    serviceLink: "/services/roadtransport",
+
+    serviceLink: "/services/road-transport",
   },
   {
     imageSrc: TruckSales2,
     company: "Truck Sales.",
 
     title: "Shop directly from European Market",
- 
-    serviceLink: "/services/trucksales",
+
+    serviceLink: "/services/truck-sales",
   },
 ];
 
 const StyledDiv = tw.div` p-8`;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeadingTop)`w-full`;
 const CustomClearing = () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
   const DecoratorBlob1 = styled.div`
-  ${tw`pointer-events-none opacity-5 absolute left-1/2 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
-`;
+    ${tw`pointer-events-none opacity-5 absolute left-1/2 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
+  `;
   const [show, setShow] = useState(false);
   const [showWhite, setShowWhite] = useState(false);
   useEffect(() => {
@@ -54,6 +53,8 @@ const CustomClearing = () => {
   }, []);
 
   useEffect(() => {
+    document.title =
+      "Custom Clearing - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     window.addEventListener("scroll", (e) => {
       window.scrollY > 200 ? setShow(true) : setShow(false);
     });
@@ -96,11 +97,10 @@ const CustomClearing = () => {
           description2="Our clients’ business is our first focus at NemFra. Our extensive communication network and significant investment in cutting-edge technology (such as GPS tracking, immediate proof of delivery, and real-time ETAs) ensure that the container’s whole voyage is as efficient as possible – swift, trackable, and on time."
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
           subheading={<Subheading>Clearing Made Simple</Subheading>}
-          imageSrc={
-           Custom1
-          }
+          imageSrc={Custom1}
           imageBorder={true}
           imageDecoratorBlob={true}
+          imageAlt="Custom clearance"
         />
       </span>
       <button

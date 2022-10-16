@@ -51,6 +51,7 @@ export default ({
   primaryButtonUrl = "/",
   imageSrc = "",
   buttonRounded = true,
+  buttonTitle = "",
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
@@ -58,6 +59,7 @@ export default ({
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
+  imageAlt = "",
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
   const navigate = useNavigate();
@@ -73,6 +75,7 @@ export default ({
             imageBorder={imageBorder}
             imageShadow={imageShadow}
             imageRounded={imageRounded}
+            alt={imageAlt}
           />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
@@ -84,6 +87,7 @@ export default ({
             <PrimaryButton
               buttonRounded={buttonRounded}
               onClick={() => navigate(primaryButtonUrl)}
+              title={buttonTitle}
             >
               {primaryButtonText}
             </PrimaryButton>

@@ -37,7 +37,7 @@ const Information = () => {
           <p>
             We have put in place physical, technical, and administrative
             measures that are intended to help safeguard information in our
-            possession against loss, theft and unauthorized use, disclosure, or
+            possession against loss, theft and unauthorised use, disclosure, or
             modification. Please note, however, that no data transmission or
             storage can be guaranteed to be 100% secure. As a result, although
             we strive to protect the information we maintain, we cannot ensure

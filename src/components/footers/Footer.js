@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import { Alert, Backdrop, Collapse, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-
 const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
@@ -100,7 +99,7 @@ const Footer = () => {
               </LinkListItem>
 
               <LinkListItem>
-                <Link to="/aboutUs">
+                <Link to="/about-us">
                   <LinkItem>About Us</LinkItem>{" "}
                 </Link>
               </LinkListItem>
@@ -116,17 +115,17 @@ const Footer = () => {
             <ColumnHeading>Services</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link to="/services/roadtransport">
+                <Link to="/services/road-transport">
                   <LinkItem>Road Transportation</LinkItem>
                 </Link>
               </LinkListItem>
               <LinkListItem>
-                <Link to="/services/trucksales">
+                <Link to="/services/truck-sales">
                   <LinkItem>Truck Sales</LinkItem>
                 </Link>
               </LinkListItem>
               <LinkListItem>
-                <Link to="/services/customclearing">
+                <Link to="/services/custom-clearing">
                   <LinkItem>Custom Clearing</LinkItem>
                 </Link>
               </LinkListItem>
@@ -203,20 +202,32 @@ const Footer = () => {
         <Divider />
         <ThreeColRow>
           <LogoContainer>
-            <LogoImg src={Logo3} />
+            <LogoImg src={Logo3} alt="NemFra Logistics logo" />
           </LogoContainer>
           <CopywrightNotice>
             &copy; NemFra Ltd. All Rights Reserved.
           </CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://www.facebook.com/people/NemFra-Logistics/100086480844160/">
+            <SocialLink
+              href="https://www.facebook.com/people/NemFra-Logistics/100086480844160/"
+              target="_blank"
+              title="Facebook"
+            >
               <FacebookIcon />
             </SocialLink>
 
-            <SocialLink href="https://www.instagram.com/nemfra_logistics/">
+            <SocialLink
+              href="https://www.instagram.com/nemfra_logistics/"
+              target="_blank"
+              title="Instagram"
+            >
               <InstagramIcon />
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/company/nemfra-logistics/">
+            <SocialLink
+              href="https://www.linkedin.com/company/nemfra-logistics/"
+              target="_blank"
+              title="Linkedin"
+            >
               <Linkedin />
             </SocialLink>
           </SocialLinksContainer>

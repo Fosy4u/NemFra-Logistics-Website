@@ -14,6 +14,8 @@ export default () => {
   const [firstLoad, setFirstLoad] = useState(false);
 
   useEffect(() => {
+    document.title =
+      "Home - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);

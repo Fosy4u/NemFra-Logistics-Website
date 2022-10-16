@@ -44,13 +44,11 @@ const CardText = tw.div`mt-4`;
 const CardHeader = tw.div`flex justify-between items-center`;
 const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 
-
 const CardTitle = tw.h5`text-xl mt-4 font-bold`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
 `;
-
 
 const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
 
@@ -81,7 +79,7 @@ const OtherServices = ({
                 {" "}
                 <img src={Logo2} alt="logo" />
               </DecoratorBlob1>
-              <PrimaryLink href="/services">
+              <PrimaryLink href="/services" title={linkText}>
                 {linkText} <ArrowRightIcon />
               </PrimaryLink>
             </HeadingInfoContainer>
@@ -93,14 +91,10 @@ const OtherServices = ({
                 <CardText>
                   <CardHeader>
                     <CardCompany>{card.company}</CardCompany>
-                  
                   </CardHeader>
                   <CardTitle>{card.title}</CardTitle>
-                  <CardMeta>
-                    
-                   
-                  </CardMeta>
-                  <a href={card.serviceLink}>
+                  <CardMeta></CardMeta>
+                  <a href={card.serviceLink} title={cardLinkText}>
                     <CardAction> {cardLinkText}</CardAction>
                   </a>
                 </CardText>

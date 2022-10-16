@@ -11,14 +11,13 @@ import { SectionDescription } from "components/misc/Typography.js";
 
 import defaultCardImage from "images/shield-icon.svg";
 
-
-
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import FastIconImage from "images/fast-icon.svg";
 import ReliableIconImage from "images/reliable-icon.svg";
 import Logo2 from "../../images/Logo2.png";
+import { cardBody } from "@material-tailwind/react";
 
 const Container = tw.div`relative`;
 
@@ -86,13 +85,13 @@ export default ({
       imageSrc: FastIconImage,
       title: "On Time Delivery",
       description:
-        "We understand time is money. Hence we deliver faster than industry standard.",
+        "We understand time is money. Hence we deliver faster than industry standard",
     },
     {
       imageSrc: ShieldIconImage,
       title: "Safety",
       description:
-        "To us, every goods is treated like a gold. We monitor all our drivers to ensure they follow all safety practices including limitation on speed",
+        "To us, every good is treated like gold. We monitor all our drivers to ensure they follow all safety practices including limitation on speed",
     },
     {
       imageSrc: SupportIconImage,
@@ -123,7 +122,10 @@ export default ({
           <Column key={i}>
             <Card>
               <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
+                <img
+                  src={card.imageSrc || defaultCardImage}
+                  alt={card.title && card.title}
+                />
               </span>
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>

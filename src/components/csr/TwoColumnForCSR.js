@@ -73,6 +73,7 @@ export default ({
   description = "",
   textOnLeft = true,
   charities = [Foundation],
+  imageAlt = "",
 }) => {
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -87,6 +88,7 @@ export default ({
               imageBorder={imageBorder}
               imageShadow={imageShadow}
               imageRounded={imageRounded}
+              alt={imageAlt}
             />
           </ImageColumn>
           <TextColumn textOnLeft={textOnLeft}>

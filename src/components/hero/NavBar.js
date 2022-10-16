@@ -50,7 +50,7 @@ const SocialLink = styled.a`
 const drawerWidth = 240;
 const navItems = [
   { label: "Home", link: "/" },
-  { label: "About", link: "/aboutUs" },
+  { label: "About", link: "/about-us" },
   { label: "Services", link: "/services" },
   { label: "Contact Us" },
 ];
@@ -97,6 +97,7 @@ export default function NavBar(props) {
             <ListItemButton
               sx={{ textAlign: "center" }}
               onClick={() => handleNav(item.link)}
+              title={item.label}
             >
               {item.link && <p>{item.label}</p>}
               {!item.link && <p onClick={handleShow}>{item.label}</p>}
@@ -119,7 +120,7 @@ export default function NavBar(props) {
             component="div"
             sx={{ mr: 2, flexGrow: 1, display: { sm: "none" } }}
           >
-            <LogoLink href="/">
+            <LogoLink href="/" title="NemFra Logistics">
               <img
                 src={showWhite ? Logo2 : icon || Logo1}
                 alt="logo"
@@ -143,7 +144,7 @@ export default function NavBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <LogoLink href="/">
+            <LogoLink href="/" title="NemFra Logistics">
               <img
                 src={showWhite ? Logo2 : icon || Logo1}
                 alt="logo"
@@ -217,7 +218,6 @@ export default function NavBar(props) {
           </Collapse>
         </DialogHeader>
         <DialogContent>
-          
           <div className="d-flex justify-content-between">
             <div className="d-flex flex-column mt-2">
               <span className="d-flex">
@@ -240,13 +240,25 @@ export default function NavBar(props) {
             </div>
             <span>
               <SocialLinksContainer>
-                <SocialLink href="https://www.facebook.com/people/NemFra-Logistics/100086480844160/">
+                <SocialLink
+                  href="https://www.facebook.com/people/NemFra-Logistics/100086480844160/"
+                  target="_blank"
+                  title="Facebook"
+                >
                   <FacebookIcon />
                 </SocialLink>
-                <SocialLink href="https://www.instagram.com/nemfra_logistics/">
+                <SocialLink
+                  href="https://www.instagram.com/nemfra_logistics/"
+                  target="_blank"
+                  title="Instagram"
+                >
                   <InstagramIcon />
                 </SocialLink>
-                <SocialLink href="https://www.linkedin.com/company/nemfra-logistics/">
+                <SocialLink
+                  href="https://www.linkedin.com/company/nemfra-logistics/"
+                  target="_blank"
+                  title="Linkedin"
+                >
                   <Linkedin />
                 </SocialLink>
               </SocialLinksContainer>
