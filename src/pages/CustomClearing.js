@@ -92,8 +92,8 @@ const CustomClearing = () => {
       </div>
       <span>
         <ServiceDescription
-          description1="NemFra takes the custom clearance and documentation burden off customers. We operate at all ports in Nigeria. With us, you are rest assured of recieving your shipments without any ambiguities or ridiculous prices. "
-          description2="Our clients’ business is our first focus at NemFra. Our extensive communication network and significant investment in cutting-edge technology (such as GPS tracking, immediate proof of delivery, and real-time ETAs) ensure that the container’s whole voyage is as efficient as possible – swift, trackable, and on time.."
+          description1="NemFra takes the custom clearance and documentation burden off customers. We operate at all ports in Nigeria. With us, you are rest assured of receiving your shipments without any ambiguities or ridiculous prices. "
+          description2="Our clients’ business is our first focus at NemFra. Our extensive communication network and significant investment in cutting-edge technology (such as GPS tracking, immediate proof of delivery, and real-time ETAs) ensure that the container’s whole voyage is as efficient as possible – swift, trackable, and on time."
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
           subheading={<Subheading>Clearing Made Simple</Subheading>}
           imageSrc={

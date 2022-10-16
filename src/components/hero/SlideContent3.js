@@ -49,9 +49,9 @@ const SlideContent3 = () => {
           <span tw="text-primary-500">European Market Closer to You</span>
           <Paragraph>
             What if you can shop directly from Europe? NemFra makes this
-            possible. We give you direct access to European market which
-            guarantees you varieties, quality and far cheaper than local market.
-            You can have your truck within two weeks of placing order and you
+            possible. We give you direct access to the European market which
+            guarantees you variety, and quality and is far cheaper than the local market.
+            You can have your truck within two - three weeks of placing an order and you
             only make payment when delivered
           </Paragraph>
           <span className="d-flex justify-content-center align-items-center ms-5">

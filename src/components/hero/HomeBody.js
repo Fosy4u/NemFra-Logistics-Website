@@ -105,7 +105,7 @@ const HomeBody = () => {
           </Heading>
 
           <MainFeature
-            description="Freight over land using trucks of all sizes where possible keeping transit time and costs at its lowest. Monitoring the movement all over the route and tracking from source to delivery point"
+            description="Freight over land using trucks of all sizes where possible keeping transit time and costs at their lowest. Monitoring the movement all over the route and tracking from source to delivery point"
             subheading={<Subheading>Road Transportation / Haulage</Subheading>}
             primaryButtonUrl="/services/roadtransport"
             imageSrc={Truck2}
@@ -113,7 +113,7 @@ const HomeBody = () => {
             imageDecoratorBlob={true}
           />
           <MainFeature
-            description="No more need to pay exorbitant prices for purchase of trucks when you can shop directly from European market and get it delivered to you within two weeks. We assist you through the process starting from linking you to our European Market, helping you select the right truck and assisting with the shipping, clearing and delivering to your door step. Meanwhile, you can choose not to pay until delivery of your truck"
+            description="No more need to pay exorbitant prices for the purchase of trucks when you can shop directly from the European market and get it delivered to you within two weeks. We assist you through the process, starting from linking you to our European Market, helping you select the right truck and assisting with the shipping, clearing and delivering to your doorstep. Meanwhile, you can choose not to pay until the delivery of your truck"
             subheading={<Subheading>Truck Sales</Subheading>}
             primaryButtonUrl="/services/trucksales"
             imageSrc={TruckSales}
@@ -195,7 +195,7 @@ const HomeBody = () => {
               Franca Ogwudu <HighlightedText>Foundation</HighlightedText>
             </>
           }
-          description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less priviledged."
+          description="We partner with Franca Ogwudu foundation in rendering help in our communities through education scholarships and charities to the less privileged."
         />
 
         <GetStarted />

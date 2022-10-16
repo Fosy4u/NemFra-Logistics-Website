@@ -55,8 +55,8 @@ const SlideContent2 = () => {
           </Heading>
           <span tw="text-primary-500">OnTime! EveryTime!! EveryWhere!!!.</span>
           <Paragraph>
-            With our modern and environmental friendly trucks, we are able to
-            deliver at any location within Nigeria.We scrutinize the small print
+            With our modern and environmentally friendly trucks, we are able to
+            deliver at any location within Nigeria. We scrutinize the small print
             to identify where we might save you time and money. You’ll have
             specialized trucks driven by uniformed drivers with extensive
             expertise.

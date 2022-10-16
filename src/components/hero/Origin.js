@@ -36,7 +36,7 @@ const Origin = ({ heading = "", subheading = "" }) => {
           We’re a unique group of people at NemFra and we only say that because
           we do things differently, and that difference comes from the way we
           were founded. NemFra fondly coined from "Nne m (My Mother)" and
-          "Franca" was named after Late Franca Ogwudu - a teacher known for her
+          "Franca" was named after Late Franca - a teacher known for her
           love of family and passion for science and tech. This sums up why we
           regard our customers as family deserving the best with full
           transparency while leveraging the powers of technology
@@ -44,21 +44,21 @@ const Origin = ({ heading = "", subheading = "" }) => {
         <br />
         <Description>
           NemFra Logistics Limited is a reliable provider of innovative
-          logistics and supply-chain service and solutions. We aim at making
-          logistic in Nigeria simpler, safer and more efficient. We haul goods
+          logistics and supply-chain services and solutions. We aim at making
+          logistics in Nigeria simpler, safer and more efficient. We haul goods
           across all the states in Nigeria; from manufacturers to wholesalers,
           retailers and final consumers. As part of our logistic solutions, we
-          equally offer port handlings, custom's clearing, documentations and
+          equally offer port handling, customs clearing, documentation and
           brokerage services.
         </Description>
         <br />
         <Description>
-          Its no longer a news how much expensive standard trucks are in
-          Nigeria. Hence why we have many below industry standard trucks on the
+          Its no longer  news how much expensive standard trucks are in
+          Nigeria. Hence why we have many below-industry-standard trucks on the
           road. NemFra is here to solve the issue by making standard trucks
           easily accessible and affordable. With our group of professional team,
-          technology and reliable europe network of Truck companies, we assure
-          our trucks' sales customers standard and reliable trucks at exact
+          technology and reliable Europe network of Truck companies, we assure
+          our trucks' sales customers of standard and reliable trucks at exact
           European rate.
         </Description>
 

@@ -45,10 +45,10 @@ const SlideContent4 = () => {
           </Heading>
           <span tw="text-primary-500">Clearance Made Easy</span>
           <Paragraph>
-            Relax and let our well trained professionals handle all your custom
+            Relax and let our well-trained professionals handle all your customs
             clearance and documentation with full transparency in all Nigerian
-            sea ports. With our port dedicated trucks, you will have your cargo
-            hauled to any destination in Nigeria seemlessly.
+            sea ports. With our port-dedicated trucks, you will have your cargo
+            hauled to any destination in Nigeria seamlessly.
           </Paragraph>
           <span className="d-flex justify-content-center align-items-center ms-5">
             <Actions className="ms-5">
