@@ -141,7 +141,7 @@ const HomeBody = () => {
         />
 
         <Tech
-          description="We become delivery partners to your business, we solve problems together, we save you time and money and drive the efficiency of your business through the power of technology."
+          description="We become delivery partners to your business, we solve your logistics, truck procurement and custom's problems together, we save you time and money and drive the efficiency of your business through the power of technology, network and modern trucks."
           imageSrc={Tech1}
           imageBorder={false}
           imageDecoratorBlob={true}
@@ -149,7 +149,7 @@ const HomeBody = () => {
 
         <MainFeature2
           subheading={<Subheading className="brandPrimary">VALUES</Subheading>}
-          primaryButtonText="About Us"
+          primaryButtonText="Learn About Us"
           primaryButtonUrl="/aboutUs"
           description="Our objective is to be the most transparent, standard, and safest brand in Nigeria. We are committed to making our customers happy and relaxed by simplifying logistics and making truck procurement as affordable as possible by assisting you in buying directly from European market. "
           heading={
