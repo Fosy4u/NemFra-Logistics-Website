@@ -10,7 +10,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
+import CloseIcon from "@mui/icons-material/Close";
 import { HamburgerSpin } from "react-animated-burgers";
 import Nav from "components/hero/Nav";
 import Logo1 from "../../images/Logo1.png";
@@ -18,15 +18,21 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import Logo2 from "../../images/Logo2.png";
 import { Dialog, DialogHeader } from "@material-tailwind/react";
-import { DialogContent, DialogTitle, Slide } from "@mui/material";
+import {
+  Alert,
+  Collapse,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Slide,
+} from "@mui/material";
 import ContactUsForm from "components/forms/ContactUsForm";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as InstagramIcon } from "feather-icons/dist/icons/instagram.svg";
 import { ReactComponent as Phone } from "feather-icons/dist/icons/phone.svg";
 import { ReactComponent as Mail } from "feather-icons/dist/icons/mail.svg";
-import { ReactComponent as Close } from "feather-icons/dist/icons/x.svg";
 import { ReactComponent as Linkedin } from "feather-icons/dist/icons/linkedin.svg";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
@@ -66,6 +72,7 @@ export default function NavBar(props) {
   const { window, showWhite, icon } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [show, setShow] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -181,11 +188,33 @@ export default function NavBar(props) {
         fullWidth
         size="md"
       >
-        <DialogHeader className="d-flex justify-content-between">
-          <DialogTitle className="brandPrimary">Contact Us</DialogTitle>
-          <span onClick={handleClose} style={{ cursor: "pointer" }}>
-            <Close />
+        <DialogHeader className="d-flex flex-column ">
+          <span className="d-flex justify-content-between">
+            <DialogTitle className="brandPrimary">Contact Us</DialogTitle>
+            <span onClick={handleClose} style={{ cursor: "pointer" }}>
+              <CloseIcon fontSize="inherit" />
+            </span>
           </span>
+          <Collapse in={showAlert}>
+            <Alert
+              severity="success"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setShowAlert(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+            >
+              Thanks for sending your request. We will get back to you as soon
+              as possible
+            </Alert>
+          </Collapse>
         </DialogHeader>
         <DialogContent>
           <div className="d-flex justify-content-between">
@@ -222,7 +251,10 @@ export default function NavBar(props) {
               </SocialLinksContainer>
             </span>
           </div>
-          <ContactUsForm />
+          <ContactUsForm
+            setShowAlert={setShowAlert}
+            formType={"Contact Form"}
+          />
         </DialogContent>
       </Dialog>
     </Box>

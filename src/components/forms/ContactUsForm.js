@@ -3,6 +3,9 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
+import { send } from "emailjs-com";
+import { Backdrop } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-12 lg:py-12`;
@@ -37,25 +40,47 @@ const SvgDotPattern1 = tw(
   SvgDotPatternIcon
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
-const ContactUsForm = () => {
+const ContactUsForm = ({ setShowAlert, formType }) => {
+  const [showSpinner, setShowSpinner] = useState(false);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [phoneNo, setPhoneNo] = useState();
   const [message, setMessage] = useState();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const payload = {
       name,
       email,
       phoneNo,
       message,
+      formType,
     };
     console.log(payload);
+    send("service_yyuijmf", "template_7vhp96z", payload, "l7Po2HiVanmy89Qkz")
+      .then((res) => {
+        setShowAlert(true);
+        setShowSpinner(false);
+      })
+      .catch((e) => {
+        console.log(e);
+        setShowSpinner(false);
+      });
   };
 
   return (
     <Container>
       <Content>
+        <Backdrop
+          sx={{
+            color: "#fff",
+            zIndex: (theme) => theme.zIndex.drawer + 1,
+          }}
+          open={showSpinner}
+          // onClick={setShowAlert(false)}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <form action="#">
@@ -109,7 +134,7 @@ const ContactUsForm = () => {
                 type="submit"
                 value="Submit"
                 style={{ backgroundColor: "#F15A29" }}
-                onClick={handleSubmit}
+                onClick={(e) => handleSubmit(e)}
               >
                 Submit
               </SubmitButton>

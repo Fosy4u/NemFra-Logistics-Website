@@ -11,17 +11,21 @@ import { ReactComponent as Phone } from "feather-icons/dist/icons/phone.svg";
 import { ReactComponent as Mail } from "feather-icons/dist/icons/mail.svg";
 
 import Logo2 from "../../images/Logo2.png";
-import {
-  Popover,
-  PopoverHandler,
-  PopoverContent,
-  DialogHeader,
-} from "@material-tailwind/react";
-
+import { DialogHeader } from "@material-tailwind/react";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
 import ContactUsForm from "components/forms/ContactUsForm";
-import { ReactComponent as Close } from "feather-icons/dist/icons/x.svg";
+import CloseIcon from "@mui/icons-material/Close";
 import GetQuoteForm from "components/forms/GetQuoteForm";
-import { Dialog, DialogContent, DialogTitle, Slide } from "@mui/material";
+import {
+  Alert,
+  Collapse,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Slide,
+} from "@mui/material";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -70,11 +74,41 @@ export default ({
   const [show, setShow] = useState(false);
   const [showQuote, setShowQuote] = useState(false);
   const [quoteMode, setQuoteMode] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleCloseQuote = () => setShowQuote(false);
   const handleShowQuote = () => setShowQuote(true);
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Header as="h3">Select Quote</Popover.Header>
+      <Popover.Body className="d-flex flex-column">
+        <Span
+          className="btn border rounded-pill mb-1 "
+          tw="hover:text-primary-500"
+          onClick={() => {
+            setQuoteMode("logistics");
+            handleShowQuote();
+          }}
+          variant="gradient"
+        >
+          Truck Logistics
+        </Span>
+        <Span
+          className="btn border rounded-pill mt-1"
+          onClick={() => {
+            setQuoteMode("sales");
+            handleShowQuote();
+          }}
+        >
+          Truck Sales
+        </Span>
+      </Popover.Body>
+    </Popover>
+  );
+
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
       <ContentWithPaddingXl>
@@ -84,38 +118,9 @@ export default ({
               <Text>{text}</Text>
             </TextContainer>
             <LinksContainer>
-              <Popover
-                animate={{
-                  mount: { scale: 1, y: 0 },
-                  unmount: { scale: 0, y: 25 },
-                }}
-              >
-                <PopoverHandler>
-                  <PrimaryLink>{primaryLinkText}</PrimaryLink>
-                </PopoverHandler>
-                <PopoverContent className="d-flex flex-column">
-                  <Span
-                    className="btn border rounded-pill mb-1 "
-                    tw="hover:text-primary-500"
-                    onClick={() => {
-                      setQuoteMode("logistics");
-                      handleShowQuote();
-                    }}
-                    variant="gradient"
-                  >
-                    Truck Logistics
-                  </Span>
-                  <Span
-                    className="btn border rounded-pill mt-1"
-                    onClick={() => {
-                      setQuoteMode("sales");
-                      handleShowQuote();
-                    }}
-                  >
-                    Truck Sales
-                  </Span>
-                </PopoverContent>
-              </Popover>
+              <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+                <PrimaryLink>{primaryLinkText}</PrimaryLink>
+              </OverlayTrigger>
 
               <SecondaryLink onClick={handleShow}>
                 {secondaryLinkText}
@@ -138,44 +143,70 @@ export default ({
         fullWidth
         size="md"
       >
-        <DialogHeader className="d-flex justify-content-between">
-          <DialogTitle className="brandPrimary">Contact Us</DialogTitle>
-          <span onClick={handleClose} style={{ cursor: "pointer" }}>
-            <Close />
-          </span>
-        </DialogHeader>
-        <DialogContent>
-        <div className="d-flex justify-content-between">
-          <div className="d-flex flex-column mt-2">
-            <span className="d-flex">
-              {" "}
-              <span tw="text-primary-500">
-                <Mail />
-              </span>{" "}
-              <span className="brandPrimary ms-2 mb-1">info@nemfra.com </span>
+        <DialogHeader className="d-flex flex-column ">
+          <span className="d-flex justify-content-between">
+            <DialogTitle className="brandPrimary">Contact Us</DialogTitle>
+            <span onClick={handleClose} style={{ cursor: "pointer" }}>
+              <CloseIcon fontSize="inherit" />
             </span>
-            <span className="d-flex">
-              <span tw="text-primary-500">
-                <Phone />
+          </span>
+          <Collapse in={showAlert}>
+            <Alert
+              severity="success"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setShowAlert(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+            >
+              Thanks for sending your request. We will get back to you as soon
+              as possible
+            </Alert>
+          </Collapse>
+        </DialogHeader>
+
+        <DialogContent>
+          <div className="d-flex justify-content-between">
+            <div className="d-flex flex-column mt-2">
+              <span className="d-flex">
+                {" "}
+                <span tw="text-primary-500">
+                  <Mail />
+                </span>{" "}
+                <span className="brandPrimary ms-2 mb-1">info@nemfra.com </span>
               </span>
-              <span className="brandPrimary ms-2">+2347061146501</span>
+              <span className="d-flex">
+                <span tw="text-primary-500">
+                  <Phone />
+                </span>
+                <span className="brandPrimary ms-2">+2347061146501</span>
+              </span>
+            </div>
+            <span>
+              <SocialLinksContainer>
+                <SocialLink href="https://facebook.com">
+                  <FacebookIcon />
+                </SocialLink>
+                <SocialLink href="https://twitter.com">
+                  <InstagramIcon />
+                </SocialLink>
+                <SocialLink href="https://twitter.com">
+                  <Linkedin />
+                </SocialLink>
+              </SocialLinksContainer>
             </span>
           </div>
-          <span>
-            <SocialLinksContainer>
-              <SocialLink href="https://facebook.com">
-                <FacebookIcon />
-              </SocialLink>
-              <SocialLink href="https://twitter.com">
-                <InstagramIcon />
-              </SocialLink>
-              <SocialLink href="https://twitter.com">
-                <Linkedin />
-              </SocialLink>
-            </SocialLinksContainer>
-          </span>
-        </div>
-        <ContactUsForm />
+          <ContactUsForm
+            setShowAlert={setShowAlert}
+            formType={"Contact Form"}
+          />
         </DialogContent>
       </Dialog>
       <Dialog
@@ -186,15 +217,37 @@ export default ({
         fullWidth
         size="md"
       >
-        <DialogHeader className="d-flex justify-content-between">
-          <DialogTitle className="brandPrimary">
-            {" "}
-            {quoteMode === "logistics" && <span>Truck Logistics Quote</span>}
-            {quoteMode === "sales" && <span>Truck Sales Quote</span>}
-          </DialogTitle>
-          <span onClick={handleCloseQuote} style={{ cursor: "pointer" }}>
-            <Close />
+        <DialogHeader className="d-flex flex-column ">
+          <span className="d-flex justify-content-between">
+            <DialogTitle className="brandPrimary">
+              {" "}
+              {quoteMode === "logistics" && <span>Truck Logistics Quote</span>}
+              {quoteMode === "sales" && <span>Truck Sales Quote</span>}
+            </DialogTitle>
+            <span onClick={handleCloseQuote} style={{ cursor: "pointer" }}>
+              <CloseIcon fontSize="inherit" />
+            </span>
           </span>
+          <Collapse in={showAlert}>
+            <Alert
+              severity="success"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setShowAlert(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+            >
+              Thanks for sending your request. We will get back to you as soon
+              as possible
+            </Alert>
+          </Collapse>
         </DialogHeader>
         <DialogContent>
           {quoteMode === "sales" && (
@@ -204,7 +257,11 @@ export default ({
               on delivery
             </span>
           )}
-          <GetQuoteForm mode={quoteMode} />
+          <GetQuoteForm
+            mode={quoteMode}
+            setShowAlert={setShowAlert}
+            formType={quoteMode}
+          />
         </DialogContent>
       </Dialog>
     </Container>

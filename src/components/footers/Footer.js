@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import Logo3 from "../../images/Logo3.png";
-
+import { send } from "emailjs-com";
+import CircularProgress from "@mui/material/CircularProgress";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as Linkedin } from "feather-icons/dist/icons/linkedin.svg";
 import { ReactComponent as InstagramIcon } from "feather-icons/dist/icons/instagram.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { Link } from "react-router-dom";
+import { Alert, Backdrop, Collapse, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+
 
 const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
@@ -59,6 +63,29 @@ const DecoratorBlob2 = tw(
 )`absolute bottom-0 right-0 w-80 h-80 transform  translate-x-32 translate-y-48 text-primary-700 opacity-50`;
 
 const Footer = () => {
+  const [email, setEmail] = useState();
+  const [showAlert, setShowAlert] = useState(false);
+  const [showSpinner, setShowSpinner] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSpinner(true);
+    const payload = {
+      email,
+
+      formType: "Subscription to newsletter",
+    };
+    console.log(payload);
+    send("service_yyuijmf", "template_7vhp96z", payload, "l7Po2HiVanmy89Qkz")
+      .then((res) => {
+        setShowSpinner(false);
+        setShowAlert(true);
+      })
+      .catch((e) => {
+        setShowSpinner(false);
+        console.log(e);
+      });
+  };
   return (
     <Container>
       <Content>
@@ -125,14 +152,49 @@ const Footer = () => {
           <Column>
             <SubscribeNewsletterColumn>
               <SubscribeNewsletterContainer>
+                <Collapse in={showAlert}>
+                  <Alert
+                    severity="success"
+                    action={
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setShowAlert(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    }
+                  >
+                    Thanks for subscribing
+                  </Alert>
+                </Collapse>
                 <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
                 <SubscribeText className="brandPrimary">
                   Get in touch with what is happening in Nemfra as well as
                   logistic ecosystem in Nigeria.
                 </SubscribeText>
+                <Backdrop
+                  sx={{
+                    color: "#fff",
+                    zIndex: (theme) => theme.zIndex.drawer + 1,
+                  }}
+                  open={showSpinner}
+                  // onClick={setShowAlert(false)}
+                >
+                  <CircularProgress color="inherit" />
+                </Backdrop>
                 <SubscribeForm method="get" action="#">
-                  <Input type="email" placeholder="Your Email Address" />
-                  <SubscribeButton type="submit">Subscribe</SubscribeButton>
+                  <Input
+                    type="email"
+                    placeholder="Your Email Address"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <SubscribeButton onClick={(e) => handleSubmit(e)}>
+                    Subscribe
+                  </SubscribeButton>
                 </SubscribeForm>
               </SubscribeNewsletterContainer>
             </SubscribeNewsletterColumn>

@@ -7,10 +7,17 @@ import {
   PopoverContent,
   DialogHeader,
 } from "@material-tailwind/react";
-
-import { ReactComponent as Close } from "feather-icons/dist/icons/x.svg";
+import CloseIcon from "@mui/icons-material/Close";
 import GetQuoteForm from "components/forms/GetQuoteForm";
-import { Dialog, DialogContent, DialogTitle, Slide } from "@mui/material";
+import {
+  Alert,
+  Collapse,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Slide,
+} from "@mui/material";
 
 const Actions = styled.div`
   ${tw`relative max-w-md text-center mx-auto lg:mx-0`}
@@ -29,7 +36,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const Quote = () => {
   const [email, setEmail] = useState();
-
+  const [showAlert, setShowAlert] = useState(false);
   const [showQuote, setShowQuote] = useState(false);
   const [quoteMode, setQuoteMode] = useState("");
 
@@ -85,15 +92,37 @@ const Quote = () => {
         fullWidth
         size="md"
       >
-        <DialogHeader className="d-flex justify-content-between">
-          <DialogTitle className="brandPrimary">
-            {" "}
-            {quoteMode === "logistics" && <span>Truck Logistics Quote</span>}
-            {quoteMode === "sales" && <span>Truck Sales Quote</span>}
-          </DialogTitle>
-          <span onClick={handleCloseQuote} style={{ cursor: "pointer" }}>
-            <Close />
+        <DialogHeader className="d-flex flex-column ">
+          <span className="d-flex justify-content-between">
+            <DialogTitle className="brandPrimary">
+              {" "}
+              {quoteMode === "logistics" && <span>Truck Logistics Quote</span>}
+              {quoteMode === "sales" && <span>Truck Sales Quote</span>}
+            </DialogTitle>
+            <span onClick={handleCloseQuote} style={{ cursor: "pointer" }}>
+              <CloseIcon fontSize="inherit" />
+            </span>
           </span>
+          <Collapse in={showAlert}>
+            <Alert
+              severity="success"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setShowAlert(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+            >
+              Thanks for sending your request. We will get back to you as soon
+              as possible
+            </Alert>
+          </Collapse>
         </DialogHeader>
         <DialogContent>
           {quoteMode === "sales" && (
@@ -103,7 +132,12 @@ const Quote = () => {
               on delivery
             </span>
           )}
-          <GetQuoteForm mode={quoteMode} initial={{ email }} />
+          <GetQuoteForm
+            mode={quoteMode}
+            initial={{ email }}
+            setShowAlert={setShowAlert}
+            formType={quoteMode}
+          />
         </DialogContent>
       </Dialog>
     </div>
