@@ -49,6 +49,7 @@ const ContactUsForm = ({ setShowAlert, formType }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setShowSpinner(true)
     const payload = {
       name,
       email,

@@ -217,6 +217,7 @@ export default function NavBar(props) {
           </Collapse>
         </DialogHeader>
         <DialogContent>
+          
           <div className="d-flex justify-content-between">
             <div className="d-flex flex-column mt-2">
               <span className="d-flex">
