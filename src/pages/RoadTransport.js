@@ -98,7 +98,7 @@ const RoadTransport = () => {
           description1="We offer truck logistic solution accross all the states in Nigeria. We scrutinise the small print
           to identify where we might save you time and money. You’ll have
           specialised trucks driven by uniformed drivers with extensive
-          expertise.. "
+          expertise. "
           description2='We have a 24 hours tracking system which gives you visibilty and update on your goods. We often say "our drivers never drive alone" Yes, because our drivers are been monitored and assisted by well-trained contollers ensuring adherence to all our policies especially health and safety.'
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
           subheading={
