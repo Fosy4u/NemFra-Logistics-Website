@@ -17,7 +17,7 @@ import NavBar from "components/hero/NavBar";
 import ServiceDescription from "components/hero/ServiceDescription";
 import styled from "styled-components";
 import Logo2 from "../images/Logo2.png";
-import Custom from "../images/customClearing.jpeg";
+import Custom1 from "../images/custom1.JPG";
 import OtherServices from "components/hero/OtherServices";
 
 const StyledDiv = tw.div` p-8`;
@@ -33,7 +33,7 @@ const cards = [
     serviceLink: "/services/road-transport",
   },
   {
-    imageSrc: Custom,
+    imageSrc: Custom1,
     company: "Custom Clearing / Documentation",
     title: "Clear your shipment and have it on your door post with no hassle",
 

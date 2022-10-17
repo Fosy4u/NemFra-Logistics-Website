@@ -17,7 +17,7 @@ import CustomizeIconImage from "images/customize-icon.svg";
 import FastIconImage from "images/fast-icon.svg";
 import ReliableIconImage from "images/reliable-icon.svg";
 import Logo2 from "../../images/Logo2.png";
-import { cardBody } from "@material-tailwind/react";
+
 
 const Container = tw.div`relative`;
 

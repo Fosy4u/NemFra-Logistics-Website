@@ -11,7 +11,7 @@ import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg
 import Logo2 from "../images/Logo2.png";
 import Truck1 from "../images/Truck-1-on-white-background.png";
 import TruckSales2 from "../images/TruckSales2.png";
-import Custom from "../images/customClearing.jpeg";
+import Custom1 from "../images/custom1.JPG";
 
 import NavBar from "components/hero/NavBar";
 import ServiceDescription from "components/hero/ServiceDescription";
@@ -35,7 +35,7 @@ const cards = [
     serviceLink: "/services/truck-sales",
   },
   {
-    imageSrc: Custom,
+    imageSrc: Custom1,
     company: "Custom Clearing / Documentation",
     title: "Clear your shipment and have it on your door post with no hassle",
 
