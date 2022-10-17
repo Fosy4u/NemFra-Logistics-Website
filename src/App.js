@@ -1,7 +1,12 @@
 import React from "react";
 import GlobalStyles from "styles/GlobalStyles";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import SaaSProductLandingPage from "home/LandingPage";
 import AboutUs from "pages/AboutUs";
 import Services from "pages/Services";
@@ -11,7 +16,6 @@ import RoadTransport from "pages/RoadTransport";
 import TruckSales from "pages/TruckSales";
 import CustomClearing from "pages/CustomClearing";
 import PrivacyPolicies from "pages/PrivacyPolicies";
-
 
 const theme = createTheme({
   palette: {
@@ -34,6 +38,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SaaSProductLandingPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/policies" element={<PrivacyPolicies />} />
           <Route path="/services" element={<Services />} />
