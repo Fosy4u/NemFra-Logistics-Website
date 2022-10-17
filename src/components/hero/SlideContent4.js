@@ -52,7 +52,10 @@ const SlideContent4 = () => {
           </Paragraph>
           <span className="d-flex justify-content-center align-items-center ms-5">
             <Actions className="ms-5">
-              <button onClick={() => navigate("/services/customclearing/")}>
+              <button
+                onClick={() => navigate("/services/custom-clearing/")}
+                title="Find out more"
+              >
                 Find Out More
               </button>
             </Actions>
@@ -66,7 +69,7 @@ const SlideContent4 = () => {
               src={
                 "https://www.asianausa.com/wp-content/uploads/2019/12/bigstock-Forklift-Handling-Container-Bo-305817547.jpg"
               }
-              alt="Design Illustration"
+              alt="Custom clearance"
             />
           </IllustrationContainer>
         </RightColumn>

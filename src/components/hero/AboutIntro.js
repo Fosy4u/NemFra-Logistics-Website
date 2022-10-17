@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 
-const Paragraph = tw.h2`font-bold text-3xl md:text-4xl lg:text-4xl xl:text-4xl`;
+const Paragraph = tw.h1`font-bold text-3xl md:text-4xl lg:text-4xl xl:text-4xl`;
 const AboutIntro = () => {
   return (
     <div className="mt-5">
@@ -13,7 +13,11 @@ const AboutIntro = () => {
           </strong>
         </Paragraph>
       </span>
-      <span style={{ position: "absolute", bottom: "0", right: "0" }} className='bg-white' tw='rounded-lg'>
+      <span
+        style={{ position: "absolute", bottom: "0", right: "0" }}
+        className="bg-white"
+        tw="rounded-lg"
+      >
         <blockquote style={{ padding: "20px" }}>
           <svg
             viewBox="0 0 512 512"

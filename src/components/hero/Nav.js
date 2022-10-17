@@ -34,25 +34,19 @@ const Nav = ({ roundedHeaderButton, showWhite = "false", handleShow }) => {
       {" "}
       <NavLinks key={1}>
         <Link to="/">
-          <NavLink  className={`${showWhite ? " " : "text-white"}`}>
+          <NavLink className={`${showWhite ? " " : "text-white"}`}>
             Home
           </NavLink>
         </Link>
-        <Link to="/aboutUs">
-        <NavLink
-          className={`${showWhite ? " " : "text-white"}`}
-        
-        >
-          About
-        </NavLink>
+        <Link to="/about-us">
+          <NavLink className={`${showWhite ? " " : "text-white"}`}>
+            About
+          </NavLink>
         </Link>
         <Link to="/services">
-        <NavLink
-          className={`${showWhite ? " " : "text-white"}`}
-      
-        >
-          Services
-        </NavLink>
+          <NavLink className={`${showWhite ? " " : "text-white"}`}>
+            Services
+          </NavLink>
         </Link>
         <PrimaryLink
           css={roundedHeaderButton && tw`rounded-full`}

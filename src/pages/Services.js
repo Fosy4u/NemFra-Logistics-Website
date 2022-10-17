@@ -10,20 +10,18 @@ import Footer from "components/footers/Footer.js";
 import CarouselFade from "components/hero/CarouselFade";
 import Quote from "components/hero/Quote";
 
-
 import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg";
 
 import NavBar from "components/hero/NavBar";
 import Logo1 from "../images/Logo2.png";
 
-
 const StyledDiv = tw.div` p-8`;
 
 const Services = () => {
-
-
   const [show, setShow] = useState(false);
   useEffect(() => {
+    document.title =
+      "Services - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);

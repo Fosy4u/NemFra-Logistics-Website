@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import "../styles/GlobalCss.css";
@@ -6,7 +6,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/Footer.js";
 import Quote from "components/hero/Quote";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeadingTop } from "components/misc/Headings.js";
 import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg";
 import Logo2 from "../images/Logo2.png";
 import Truck1 from "../images/Truck-1-on-white-background.png";
@@ -23,7 +23,7 @@ const DecoratorBlob1 = styled.div`
 `;
 
 const StyledDiv = tw.div` p-8`;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeadingTop)`w-full`;
 
 const cards = [
   {
@@ -32,14 +32,14 @@ const cards = [
 
     title: "Shop directly from European Market",
 
-    serviceLink: "/services/trucksales",
+    serviceLink: "/services/truck-sales",
   },
   {
     imageSrc: Custom,
     company: "Custom Clearing / Documentation",
     title: "Clear your shipment and have it on your door post with no hassle",
 
-    serviceLink: "/services/customclearing",
+    serviceLink: "/services/custom-clearing",
   },
 ];
 
@@ -50,6 +50,8 @@ const RoadTransport = () => {
   const [show, setShow] = useState(false);
   const [showWhite, setShowWhite] = useState(false);
   useEffect(() => {
+    document.title =
+      "Road Transportation - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -93,9 +95,9 @@ const RoadTransport = () => {
       </div>
       <span>
         <ServiceDescription
-          description1="We offer truck logistic solution accross all the states in Nigeria. We scrutinize the small print
+          description1="We offer truck logistic solution accross all the states in Nigeria. We scrutinise the small print
           to identify where we might save you time and money. You’ll have
-          specialized trucks driven by uniformed drivers with extensive
+          specialised trucks driven by uniformed drivers with extensive
           expertise.. "
           description2='We have a 24 hours tracking system which gives you visibilty and update on your goods. We often say "our drivers never drive alone" Yes, because our drivers are been monitored and assisted by well-trained contollers ensuring adherence to all our policies especially health and safety.'
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
@@ -105,6 +107,7 @@ const RoadTransport = () => {
           imageSrc={Truck1}
           imageBorder={true}
           imageDecoratorBlob={true}
+          imageAlt="NemFra Logistics"
         />
       </span>
       <DecoratorBlob1>
@@ -131,6 +134,7 @@ const RoadTransport = () => {
         class="whatsapp_float bounceIn"
         target="_blank"
         rel="noopener noreferrer"
+        title="Whatsapp"
       >
         <i class="fa fa-whatsapp whatsapp-icon"></i>
       </a>

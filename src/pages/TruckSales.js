@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import "../styles/GlobalCss.css";
@@ -6,7 +6,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/Footer.js";
 import Quote from "components/hero/Quote";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeadingTop } from "components/misc/Headings.js";
 
 import { ReactComponent as ArrowUp } from "feather-icons/dist/icons/arrow-up.svg";
 
@@ -21,8 +21,7 @@ import Custom from "../images/customClearing.jpeg";
 import OtherServices from "components/hero/OtherServices";
 
 const StyledDiv = tw.div` p-8`;
-const Heading = tw(SectionHeading)`w-full`;
-
+const Heading = tw(SectionHeadingTop)`w-full`;
 
 const cards = [
   {
@@ -31,17 +30,16 @@ const cards = [
     type: "Ad Campaign",
     title: "Get your goods moved to anywhere in Nigeria",
 
-    serviceLink: "/services/roadtransport",
+    serviceLink: "/services/road-transport",
   },
   {
     imageSrc: Custom,
     company: "Custom Clearing / Documentation",
     title: "Clear your shipment and have it on your door post with no hassle",
 
-    serviceLink: "/services/customclearing",
+    serviceLink: "/services/custom-clearing",
   },
 ];
-
 
 const TruckSales = () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -52,6 +50,8 @@ const TruckSales = () => {
   const [show, setShow] = useState(false);
   const [showWhite, setShowWhite] = useState(false);
   useEffect(() => {
+    document.title =
+      "Truck Sales - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -102,6 +102,7 @@ const TruckSales = () => {
           imageSrc={TruckSales2}
           imageBorder={true}
           imageDecoratorBlob={true}
+          imageAlt="Trucks for sale"
         />
       </span>
       <button

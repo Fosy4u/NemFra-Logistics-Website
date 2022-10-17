@@ -55,7 +55,7 @@ export default ({ headingText = "Terms And Condition" }) => {
             <h1>Interpretation and Definitions</h1>
             <h2>Interpretation</h2>
             <p>
-              The words of which the initial letter is capitalized have meanings
+              The words of which the initial letter is capitalised have meanings
               defined under the following conditions.
             </p>
             <p>

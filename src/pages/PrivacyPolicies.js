@@ -35,6 +35,8 @@ const PrivacyPolicies = () => {
   const [show, setShow] = useState(false);
   const [showWhite, setShowWhite] = useState(false);
   useEffect(() => {
+    document.title =
+      "Privacy Policies - A Tech-Enabled Truck Logistics and Sales company in Nigeria.";
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);

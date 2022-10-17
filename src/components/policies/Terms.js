@@ -33,7 +33,7 @@ const Terms = () => {
     <div>
       <Text>
         <p>
-          NemFra recognizes the importance of protecting your personal
+          NemFra recognises the importance of protecting your personal
           information, and this Privacy Policy explains our privacy practices
           when it comes to using, sharing, and protecting the information we
           collect when you visit our “nemfra.com” website and any other online

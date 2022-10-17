@@ -78,6 +78,7 @@ export default ({
   primaryButtonUrl = "",
   imageSrc = "",
   buttonRounded = true,
+  buttonTitle = "",
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
@@ -87,6 +88,7 @@ export default ({
   iconRoundedFull = true,
   iconFilled = true,
   iconContainerCss = null,
+  imageAlt = "",
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -113,6 +115,7 @@ export default ({
             imageBorder={imageBorder}
             imageShadow={imageShadow}
             imageRounded={imageRounded}
+            alt={imageAlt}
           />
           {showDecoratorBlob && <DecoratorBlob />}
         </ImageColumn>
@@ -142,6 +145,7 @@ export default ({
             <PrimaryButton
               buttonRounded={buttonRounded}
               onClick={() => navigate(primaryButtonUrl)}
+              title={buttonTitle}
             >
               {primaryButtonText}
             </PrimaryButton>

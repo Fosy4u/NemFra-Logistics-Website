@@ -8,7 +8,6 @@ import { css } from "styled-components/macro";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import { useNavigate } from "react-router-dom";
 
-
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left `;
@@ -34,10 +33,8 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3 -z-10`}
 `;
 
-
-
 const SlideContent3 = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Container className="mt-5">
       <TwoColumn>
@@ -50,16 +47,20 @@ const SlideContent3 = () => {
           <Paragraph>
             What if you can shop directly from Europe? NemFra makes this
             possible. We give you direct access to the European market which
-            guarantees you variety, and quality and is far cheaper than the local market.
-            You can have your truck within two - three weeks of placing an order and you
-            only make payment when delivered
+            guarantees you variety, and quality and is far cheaper than the
+            local market. You can have your truck within two - three weeks of
+            placing an order and you only make payment when delivered
           </Paragraph>
           <span className="d-flex justify-content-center align-items-center ms-5">
             <Actions className="ms-5">
-              <button onClick={() => navigate("/services/trucksales/")}>Find Out More</button>
+              <button
+                onClick={() => navigate("/services/truck-sales/")}
+                title="Find Out More"
+              >
+                Find Out More
+              </button>
             </Actions>
           </span>
-         
         </LeftColumn>
         <RightColumn>
           <IllustrationContainer>
@@ -67,7 +68,7 @@ const SlideContent3 = () => {
               className="swing"
               tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
               src={Truck6}
-              alt="Design Illustration"
+              alt="Custom clearance"
             />
           </IllustrationContainer>
         </RightColumn>
