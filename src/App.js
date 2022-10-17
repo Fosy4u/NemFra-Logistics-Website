@@ -1,7 +1,12 @@
 import React from "react";
 import GlobalStyles from "styles/GlobalStyles";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import SaaSProductLandingPage from "home/LandingPage";
 import AboutUs from "pages/AboutUs";
 import Services from "pages/Services";
@@ -33,7 +38,12 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SaaSProductLandingPage />} />
+
           <Route path="/about-us" element={<AboutUs />} />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
+          
+
           <Route path="/policies" element={<PrivacyPolicies />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/road-transport" element={<RoadTransport />} />
