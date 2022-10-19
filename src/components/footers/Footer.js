@@ -47,7 +47,7 @@ const SubscribeNewsletterColumn = tw(
   Column
 )`text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12`;
 const SubscribeNewsletterContainer = tw.div`max-w-sm mx-auto lg:mx-0 `;
-const SubscribeText = tw.p`mt-2 lg:mt-6 text-sm font-medium text-orange-600`;
+const SubscribeText = tw.p`mt-2 lg:mt-6 text-sm font-medium`;
 const SubscribeForm = tw.form`mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0`;
 const Input = tw.input`bg-white text-black px-6 py-3 rounded sm:rounded-r-none border-2 sm:border-r-0 border-gray-400 hover:border-primary-500 focus:outline-none transition duration-300 w-full`;
 const SubscribeButton = tw(
@@ -65,6 +65,7 @@ const Footer = () => {
   const [email, setEmail] = useState();
   const [showAlert, setShowAlert] = useState(false);
   const [showSpinner, setShowSpinner] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,6 +86,8 @@ const Footer = () => {
           setShowSpinner(false);
           console.log(e);
         });
+    } else {
+      setError(true);
     }
   };
   return (
@@ -173,7 +176,7 @@ const Footer = () => {
                   </Alert>
                 </Collapse>
                 <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
-                <SubscribeText className="brandPrimary">
+                <SubscribeText>
                   Get in touch with what is happening in Nemfra as well as
                   logistic ecosystem in Nigeria.
                 </SubscribeText>
@@ -187,6 +190,7 @@ const Footer = () => {
                 >
                   <CircularProgress color="inherit" />
                 </Backdrop>
+
                 <SubscribeForm method="get" action="#">
                   <Input
                     type="email"
@@ -197,6 +201,11 @@ const Footer = () => {
                     Subscribe
                   </SubscribeButton>
                 </SubscribeForm>
+                {error && !email && (
+                  <p tw="text-red-500">
+                    Please insert email before clicking subscribe button
+                  </p>
+                )}
               </SubscribeNewsletterContainer>
             </SubscribeNewsletterColumn>
           </Column>
