@@ -95,7 +95,7 @@ const RoadTransport = () => {
       </div>
       <span>
         <ServiceDescription
-          description1="We offer truck logistic solution accross all the states in Nigeria. We scrutinise the small print
+          description1="We offer truck logistic solution across all the states in Nigeria. We scrutinise the small print
           to identify where we might save you time and money. You’ll have
           specialised trucks driven by uniformed drivers with extensive
           expertise. "

@@ -68,22 +68,24 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowSpinner(true);
-    const payload = {
-      email,
+    if (email) {
+      setShowSpinner(true);
+      const payload = {
+        email,
 
-      formType: "Subscription to newsletter",
-    };
-    console.log(payload);
-    send("service_yyuijmf", "template_7vhp96z", payload, "l7Po2HiVanmy89Qkz")
-      .then((res) => {
-        setShowSpinner(false);
-        setShowAlert(true);
-      })
-      .catch((e) => {
-        setShowSpinner(false);
-        console.log(e);
-      });
+        formType: "Subscription to newsletter",
+      };
+      console.log(payload);
+      send("service_yyuijmf", "template_7vhp96z", payload, "l7Po2HiVanmy89Qkz")
+        .then((res) => {
+          setShowSpinner(false);
+          setShowAlert(true);
+        })
+        .catch((e) => {
+          setShowSpinner(false);
+          console.log(e);
+        });
+    }
   };
   return (
     <Container>
