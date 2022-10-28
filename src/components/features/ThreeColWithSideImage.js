@@ -103,7 +103,7 @@ export default ({
       imageSrc: CustomizeIconImage,
       title: "Tracking and Automation",
       description:
-        "Our technology gives you visiblity and real time tracking. Most of our processes are automated and powered by technology, thereby giving you that seemless experience",
+        "Our technology gives you visiblity and real time tracking. Most of our processes are automated and powered by technology, thereby giving you that seamless experience",
     },
 
     // { imageSrc: SimpleIconImage, title: "Easy" },

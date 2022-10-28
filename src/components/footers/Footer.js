@@ -216,7 +216,7 @@ const Footer = () => {
             <LogoImg src={Logo3} alt="NemFra Logistics logo" />
           </LogoContainer>
           <CopywrightNotice>
-            &copy; NemFra Ltd. All Rights Reserved.
+            &copy; NemFra Tech. All Rights Reserved.
           </CopywrightNotice>
           <SocialLinksContainer>
             <SocialLink
