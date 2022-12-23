@@ -95,7 +95,7 @@ const TruckSales = () => {
       </div>
       <span>
         <ServiceDescription
-          description1="NemFra provides an E-Market where you can buy standard trucks at cheaper prices direct from the European market. Thanks to our international partnership with European Truck Companies and our automated tech, we are able to link you up with European Companies that have your desired truck in their stock. We operate with full transparency ensuring you buy at the same rate listed by the company without any hidden charges"
+          description1="NemFra provides an E-Market in Nigeria where you can buy standard trucks at cheaper prices direct from the European market. Thanks to our international partnership with European Truck Companies and our automated tech, we are able to link you up with European Companies that have your desired truck in their stock. We operate with full transparency ensuring you buy at the same rate listed by the company without any hidden charges"
           description2="With us, you need not worry about truck procurement. You are guaranteed realiability as well as buying far cheaper than the local market. You have your truck delivered to your door post in Nigeria within 2-3 weeks of order. Oh yes! you can choose to pay on delivery and you can allow us to help you with both the shipping and customs clearing/documentations."
           description3="We are just one call/chat or email away. Let our experienced team kickstart our promise to you."
           subheading={<Subheading> European Market Closer to You</Subheading>}
